@@ -7,35 +7,55 @@
         <title>{{ $title }} :: DV Libros</title>
 
         <link rel="stylesheet" href="{{ url('css/styles.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+      
     </head>
     <body>
         <div id="app">
 
-            <nav class="">
-                <div class="">
-                    <a class="" href="{{ route('index') }}">DV Libros</a>
-                    <button class="" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class=""></span>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{{ route('index') }}">LibraLink</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="" id="">
-                        <ul class="">
-                            <li class="">
-                                <a class="" href="{{ route('index') }}">Home</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                             </li>
-                            <li class="">
-                                <a class="" href="{{ route('about') }}">Sobre nosotros!</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('about') }}">Sobre Nosotros</a>
                             </li>
                         </ul>
+                        <button class="btn btn-outline-success" type="submit">Ingresar</button>
                     </div>
                 </div>
             </nav>
 
             <main class="container p-4">
+                <h1 class="d-none">Bienvenido a LibraLink</h1>
+
                 {{ $slot }}
             </main>
+
             <footer class="footer">
-                <p>Archilli - Merlo - Moreno - Copyright &copy; 2024</p>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="text-center">Archilli - Merlo - Moreno - Copyright &copy; 2024</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="text-center">Redes</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <p class="text-center">Ubicacion</p>
+                    </div>
+                </div>
+                
             </footer>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

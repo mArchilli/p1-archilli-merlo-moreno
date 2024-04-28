@@ -1,5 +1,10 @@
 <x-layout>
     <x-slot:title>Sobre nosotros</x-slot:title>
 
-    <h1>Sobre nosotros</h1>
+    <div class="row">
+        <div class="col-12">
+            Sobre nosotros
+        </div>
+    </div>
+    
 </x-layout>
