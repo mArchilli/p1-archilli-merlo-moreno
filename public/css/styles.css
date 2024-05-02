@@ -22,6 +22,8 @@ body{
     transform: scale(1.1);
 }
 
+
+
 .mostaza{
     color: #ca8e5e;
     font-style: italic;
@@ -35,8 +37,14 @@ body{
     color: #ca8e5e;
 }
 
-.imgtamano{
-    width: 10%;
+.imgtamano {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.imgtamano:hover {
+    transform: scale(1.1);
 }
 
 .btnespecial{
@@ -153,3 +161,4 @@ body{
   .border-bottom { border-bottom: 1px solid #e5e5e5; }
   
   .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
