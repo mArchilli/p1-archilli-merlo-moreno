@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="text-container">                                    
                                 <h6 class="mosta">La buena escritura</h6>
-                                    <p>Con la tinta como su herramienta de creación, los escritores poseen un poder extraordinario: el poder de cautivar, informar y transformar la...</p>
+                                    <p>Con la tinta como su herramienta de creación, los escritores poseen un poder extraordinario: el poder de cautivar, informar y transformar la percepción...</p>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
 
                                 <div class="text-container">
                                     <h6 class="mosta">La próxima entrega de GOT</h6>
-                                   <p>George R. R. Martin ha confirmado que continúa sumido en la escritura del próximo libro de la franquicia de Juego de Tronos. Vientos..</p>
+                                   <p>George R. R. Martin ha confirmado que continúa sumido en la escritura del próximo libro de la franquicia de Juego de Tronos. Vientos del este en los reinos..</p>
                                 </div>
                             </div>
                         </div>
