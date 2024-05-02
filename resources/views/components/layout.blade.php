@@ -14,6 +14,7 @@
     <body>
         <div id="app">
 
+        <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{ route('index') }}">LibraLink</a>
@@ -32,7 +33,7 @@
                         <button class="btn btn-outline-success" type="submit">Ingresar</button>
                     </div>
                 </div>
-            </nav>
+            </nav></div>
 
             <main class="container p-4">
                 <h1 class="d-none">Bienvenido a LibraLink</h1>

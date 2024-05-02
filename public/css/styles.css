@@ -1,0 +1,71 @@
+
+html {
+    font-size: 14px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+body{
+    background-color: #fefaef;
+}
+
+.imgbanner{
+    width: 32%;
+    padding: 1rem;
+}
+
+.mostaza{
+    color: #ca8e5e;
+    font-style: italic;
+}
+
+.bglibros{
+    background-color: #24262b;
+}
+
+.mosta{
+    color: #ca8e5e;
+}
+
+.imgtamano{
+    width: 10%;
+}
+
+.btnespecial{
+    background-color: #ca8e5e;
+    border-radius: 5px;
+    border: none;
+    padding: .8rem;
+    color: whitesmoke;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btnespecial:hover{
+    background-color: #d8ae8b;
+}
+
+.bgsuscripcion{
+    background-image: url('../images/home/ilustracion-suscripcion.png');
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 960px;
+  }
+  
+  .pricing-header {
+    max-width: 700px;
+  }
+  
+  .card-deck .card {
+    min-width: 220px;
+  }
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
