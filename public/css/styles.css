@@ -14,7 +14,7 @@ body{
 
 
 .imgbanner{
-    width: 32%;
+    width: 37%;
     padding: 1rem;
     transition: transform 0.3s ease;
 }
@@ -52,7 +52,7 @@ body{
     background-color: #ca8e5e;
     border-radius: 5px;
     border: none;
-    padding: .8rem;
+    padding: .6rem;
     color: whitesmoke;
     font-weight: 600;
     text-decoration: none;

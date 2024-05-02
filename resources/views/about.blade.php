@@ -2,7 +2,7 @@
     <x-slot:title>Sobre nosotros</x-slot:title>
 
     <section class="py-5">
-	<div class="container">
+	<div class="mt-5 container">
 		<div class="row align-items-center gx-4">
 			<div class="col-md-5">
 				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="{{ asset('images/about/libro.jpg') }}"></div>

@@ -1,15 +1,15 @@
 <x-layout>
     <x-slot:title>Home</x-slot:title>
 
-    <div class="container row">
-        <div class="col-5 d-flex align-items-center">
+    <div class="pt-5 m-auto">
+        <div class="d-flex align-items-center">
             <h2 class="fs-1 p-5 m-5">Un mundo de fantasía a un <span class="mostaza">click</span> de distancia</h2>
-        </div>
-            <div class="col-7">
+        
+            <div class="d-flex">
         <img class= "pt-5 pb-5 imgbanner" src="{{ asset('images/libros/1q84-murakami.jpg') }}" alt="Libro uno">
        <img class= "pt-5 pb-5 imgbanner" src="{{ asset('images/libros/alicia-en-el-pais-de-las-maravillas.jpg') }}" alt="Libro dos">    
        <img class= "pt-5 pb-5 imgbanner" src="{{ asset('images/libros/cuentos-imprescindibles.jpg') }}" alt="Libro tres">           
-        </div>
+        </div></div>
 
 <section class="pt-5">
 <div class="row align-items-center" >
@@ -199,7 +199,7 @@
             <ul class="list-unstyled mt-3 mb-4">
               <li class="p-3 fw-bold">Sin anuncios</li>
               <li class="p-3 fw-bold">Acceso ilimitado a 10,000+ libros</li>
-              <li class="p-3 fw-bold">Descargas ilimitadas de libros</li>
+              <li class="p-3 fw-bold">Descargas ilimitadas de todos nuestros libros</li>
               <li class="p-3 fw-bold">Acceso exclusivo al blog de noticias y críticas</li>
             </ul>
             <button type="button" class="btnespecial">Empieza ahora</button>

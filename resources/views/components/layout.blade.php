@@ -17,7 +17,7 @@
         <div class="fixed">
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="{{ route('index') }}">LibraLink</a>
+            <a class="navbar-brand text-white px-3" href="{{ route('index') }}">LibraLink</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,7 +36,7 @@
                         <a class="nav-link text-white px-3" href="{{ route('about') }}">Sobre Nosotros</a>
                     </li>
                 </ul>
-                <button class="btnespecial" type="submit">Ingresar</button>
+                <button class="mx-4 btnespecial" type="submit">Ingresar</button>
             </div>
         </div>
     </nav>
