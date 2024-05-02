@@ -24,16 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="{{ route('index') }}">Home</a>
+                        <a class="nav-link text-white px-3" aria-current="page" href="{{ route('index') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="{{ route('catalogo') }}">Catálogo</a>
+                        <a class="nav-link text-white px-3" aria-current="page" href="{{ route('catalogo') }}">Catálogo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="{{ route('blog') }}">Blog</a>
+                        <a class="nav-link text-white px-3" aria-current="page" href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('about') }}">Sobre Nosotros</a>
+                        <a class="nav-link text-white px-3" href="{{ route('about') }}">Sobre Nosotros</a>
                     </li>
                 </ul>
                 <button class="btnespecial" type="submit">Ingresar</button>
