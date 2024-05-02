@@ -3,7 +3,7 @@
 
     <div class="container row">
         <div class="col-5 d-flex align-items-center">
-            <h3 class="fs-1 p-5 m-5">Un mundo de fantasía a un <span class="mostaza">click</span> de distancia</h3>
+            <h2 class="fs-1 p-5 m-5">Un mundo de fantasía a un <span class="mostaza">click</span> de distancia</h2>
         </div>
             <div class="col-7">
         <img class= "pt-5 pb-5 imgbanner" src="{{ asset('images/libros/1q84-murakami.jpg') }}" alt="Libro uno">
