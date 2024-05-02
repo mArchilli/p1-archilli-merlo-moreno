@@ -30,7 +30,7 @@
                                 <a class="nav-link" href="{{ route('about') }}">Sobre Nosotros</a>
                             </li>
                         </ul>
-                        <button class="btn btn-outline-success" type="submit">Ingresar</button>
+                        <button class="btnespecial" type="submit">Ingresar</button>
                     </div>
                 </div>
             </nav></div>
