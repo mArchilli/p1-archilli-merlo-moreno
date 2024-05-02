@@ -27,6 +27,12 @@
                                 <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ route('catalogo') }}">Catálogo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ route('blog') }}">Blog</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('about') }}">Sobre Nosotros</a>
                             </li>
                         </ul>

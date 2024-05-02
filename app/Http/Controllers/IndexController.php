@@ -11,6 +11,16 @@ class IndexController extends Controller
         return view('index');
     }
 
+    public function catalogo()
+    {
+        return view('catalogo');
+    }
+
+    public function blog()
+    {
+        return view('blog');
+    }
+
     public function about()
     {
         return view('about');

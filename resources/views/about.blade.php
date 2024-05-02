@@ -121,7 +121,7 @@
 						</div>¿Cómo puedo participar en el blog de Libralink?</button></h2>
 						<div aria-labelledby="Questions-headingFour" class="accordion-collapse collapse" data-bs-parent="#Questions-accordion" id="Questions-collapseFour">
 							<div class="accordion-body">
-                            Todos nuestros usuarios registrados pueden participar en el blog. Una vez que inicies sesión, podrás escribir reseñas, compartir opiniones y discutir sobre tus autores y libros favoritos. Simplemente navega a la sección del blog en nuestro sitio web y comienza a compartir tus pensamientos y experiencias con la comunidad.
+                            Todos nuestros usuarios registrados con el plan PREMIUM pueden participar en el blog. Una vez que inicies sesión, podrás escribir reseñas, compartir opiniones y discutir sobre tus autores y libros favoritos. Simplemente navega a la sección del blog en nuestro sitio web y comienza a compartir tus pensamientos y experiencias con la comunidad.
 							</div>
 						</div>
 					</div>
