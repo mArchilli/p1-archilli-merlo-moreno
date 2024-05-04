@@ -13,7 +13,7 @@
             backdrop-filter: blur(30px);
             ">
           <div class="card-body p-5 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Ingresá Ahora</h2>
+            <h2 class="fw-bold mb-5 mosta">Ingresá Ahora</h2>
             <form>
 
               <!-- Email input -->
@@ -29,7 +29,7 @@
               </div>
 
               <!-- Submit button -->
-              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+              <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btnespecial btn-block mb-4">
                 Ingresar
               </button>
     
@@ -39,7 +39,7 @@
       </div>
 
       <div class="col-lg-6 mb-5 mb-lg-0">
-        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+        <img src="{{ asset('images/login/muchos-libros.jpg') }}" class="w-100 rounded-4 shadow-4"
           alt="" />
       </div>
     </div>
