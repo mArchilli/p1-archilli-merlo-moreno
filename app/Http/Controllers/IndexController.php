@@ -21,6 +21,12 @@ class IndexController extends Controller
         return view('blog');
     }
 
+    public function login()
+    {
+        return view('login');
+    }
+
+
     public function about()
     {
         return view('about');

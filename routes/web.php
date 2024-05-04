@@ -9,3 +9,5 @@ Route::get('/catalogo', [\App\Http\Controllers\IndexController::class, "catalogo
 Route::get('/blog', [\App\Http\Controllers\IndexController::class, "blog"])->name('blog');;
 
 Route::get('/about', [\App\Http\Controllers\IndexController::class, "about"])->name('about');;
+
+Route::get('/login', [\App\Http\Controllers\IndexController::class, "login"])->name('login');;
