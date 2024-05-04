@@ -36,7 +36,7 @@
                         <a class="nav-link text-white px-3 py-2" href="{{ route('about') }}">Sobre Nosotros</a>
                     </li>
                 </ul>
-                <a href="{{ route('login') }}" class="mx-4 btnespecial">Ingresar</a>
+                <a href="{{ route('login') }}" class="mx-4 btnespecial">Ingresar a</a>
             </div>
         </div>
     </nav>
