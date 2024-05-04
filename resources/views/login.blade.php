@@ -1,3 +1,11 @@
+<x-layout>
+
+<x-slot:title>Login</x-slot:title>
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+
+  <!-- Jumbotron -->
   <div class="container py-4">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
@@ -81,3 +89,4 @@
   <!-- Jumbotron -->
 </section>
 <!-- Section: Design Block -->
+</x-layout>
