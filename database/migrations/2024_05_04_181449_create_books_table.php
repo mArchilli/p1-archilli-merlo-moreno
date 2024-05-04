@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedSmallInteger('anio_publicacion');
             $table->string('isbn')->unique();
             $table->text('descripcion')->nullable();
+            $table->string('imagen');
             $table->timestamps();
         });
     }
