@@ -1,0 +1,11 @@
+#Correr el servidor
+php artisan serve
+
+#crear Controlador
+php artisan make:controller [nombreController]
+
+#Crear Migraciones
+php artisan make:migration [create/alter/add/update]_books_table
+
+#Migraciones y crear BBDD
+php artisan migrate
