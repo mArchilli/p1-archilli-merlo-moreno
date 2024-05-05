@@ -10,6 +10,5 @@ php artisan make:migration [create/alter/add/update]_books_table
 #Migraciones y crear BBDD
 php artisan migrate
 
-
 #Crear seeder
 php artisan make:seeder [NombreSeeder]
