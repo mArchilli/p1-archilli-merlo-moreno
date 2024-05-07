@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Libro;
 
 class LibroSeeder extends Seeder
 {
@@ -63,7 +64,7 @@ class LibroSeeder extends Seeder
                 'autor' => 'Edgar Allan Poe',
                 'editorial' => 'Public Domain Books',
                 'anio_publicacion' => 1841,
-                'isbn' => 'N/A', // Agregar ISBN si es conocido
+                'isbn' => '978-8478884684', // Agregar ISBN si es conocido
                 'descripcion' => 'Los Crímenes de la Calle Morgue es un cuento de misterio y terror escrito por Edgar Allan Poe.',
                 'imagen' => 'crimenes-de-la-calle-morgue-allan-poe.jpg',
             ],
@@ -72,7 +73,7 @@ class LibroSeeder extends Seeder
                 'autor' => 'Edgar Allan Poe',
                 'editorial' => 'Public Domain Books',
                 'anio_publicacion' => 1845, // Año aproximado
-                'isbn' => 'N/A', // Agregar ISBN si es conocido
+                'isbn' => '978-8478884079', // Agregar ISBN si es conocido
                 'descripcion' => 'Colección de cuentos escritos por Edgar Allan Poe, considerados imprescindibles en la literatura de terror.',
                 'imagen' => 'cuentos-imprescindibles.jpg',
             ],
@@ -90,7 +91,7 @@ class LibroSeeder extends Seeder
                 'autor' => 'J.R.R. Tolkien',
                 'editorial' => 'Public Domain Books',
                 'anio_publicacion' => 2023, // Año aproximado
-                'isbn' => 'N/A', // Agregar ISBN si es conocido
+                'isbn' => '978-8478884249', // Agregar ISBN si es conocido
                 'descripcion' => 'El Bosque Negro es una obra de fantasía escrita por J.R.R. Tolkien, autor de El Señor de los Anillos.',
                 'imagen' => 'el-bosque-negro-tolkien.jpg',
             ],
@@ -172,7 +173,7 @@ class LibroSeeder extends Seeder
                 'autor' => 'John Reed',
                 'editorial' => 'Public Domain Books',
                 'anio_publicacion' => 1919,
-                'isbn' => 'N/A', // No disponible
+                'isbn' => '978-8478884989', // No disponible
                 'descripcion' => 'Crónicas de la Revolución Rusa es un relato histórico escrito por John Reed, periodista estadounidense.',
                 'imagen' => 'viktor-shklovski-cronicas-de-la-revolucion-rusa.jpg',
             ],
@@ -196,6 +197,10 @@ class LibroSeeder extends Seeder
             ],
 
         ];
+
+         foreach ($libros as $libroData) {
+            Libro::create($libroData);
+        }
 
     }
 }
