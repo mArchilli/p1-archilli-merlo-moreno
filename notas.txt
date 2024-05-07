@@ -30,6 +30,9 @@ Contiene la estructura principal con contenido a reutilizar. Config HTML, nav y 
 	
 	php artisan db:seed	ejecuta el seeder y llena la base de datos
 
+## Models:
+En lugar de tener que escribir consultas SQL directamente para interactuar con la tabla libros, puedes utilizar un modelo para realizar las operaciones necesarias de manera más sencilla y orientada a objetos.
+
 ---
 
 /migrations
@@ -41,6 +44,7 @@ Se crea la tabla books. Se establecen los campos y el tipo de dato.
 Se utiliza Eloquent. Se completan los datos de prueba.
 
 app/Models
-	??
+	Libro.php
+Define la estructura y el comportamiento del modelo que representa la tabla libros en la base de datos 
 
 
