@@ -1,0 +1,46 @@
+/routes 
+	/web.php
+
+Contiene las rutas. Utilizo un solo controlador IndexController que se encarga de administrar index, catalogo, blog, about, login
+
+/app/Http/Controllers
+		/IndexController.php
+Cada método devuelve la vista correspondiente
+
+
+/views
+	/about.blade.php
+	/blog.blade.php
+	/catalogo.blade.php
+	/index.blade.php
+
+Contiene las vistas del proyecto
+
+/views/components
+	/layout.blade.php
+Contiene la estructura principal con contenido a reutilizar. Config HTML, nav y footer. En el main se reemplaza el contenido de cada vista específica.
+
+---
+
+## Migraciones: control de mi base de datos. Definen la estructura de la bd utilizando codigo PHP en lugar de usar SQL directamente. Cada migración representa un cambio en la estructura de la base de datos. Por ej: crear tablas, modificar columnas, etc. 
+
+	php artisan migrate 	aplica cambios a la base de datos
+
+## Seeders: se utilizan para poblar la bd con datos iniciales o de prueba. Se ejecutan con el comando. Dentro del Seed podes utilizar Eloquent u otro constructor de consultas de Laravel para crear y guardar registros en la base de datos.
+	
+	php artisan db:seed	ejecuta el seeder y llena la base de datos
+
+---
+
+/migrations
+	..create_books_table.php
+Se crea la tabla books. Se establecen los campos y el tipo de dato.
+
+/database/seeders
+	LibroSeeder.php
+Se utiliza Eloquent. Se completan los datos de prueba.
+
+app/Models
+	??
+
+
