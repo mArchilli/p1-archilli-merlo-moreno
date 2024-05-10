@@ -23,4 +23,12 @@ class BlogController extends Controller
             'blog' => $blog,
         ]);
     }
+
+    public function createForm(){
+        return view('blog.create-blog-form');
+    }
+
+    public function createProcess(){
+        dd($_POST);
+    }
 }
