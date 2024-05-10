@@ -12,9 +12,11 @@ Route::get('/admin', [\App\Http\Controllers\IndexController::class, "admin"])->n
 //FORMS ABM - BLOG
 Route::get('/blogadm/publicar', [\App\Http\Controllers\BlogController::class, "createForm"])->name('blog.create.form');
 Route::post('/blogadm/publicar', [\App\Http\Controllers\BlogController::class, "createProcess"])->name('blog.create.process');
-Route::get('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class, "editForm"])->name('blog.edit.form')->whereNumber('id');
-Route::get('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::class, "deleteForm"])->name('blog.delete.form')->whereNumber('id');
 
+Route::get('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class, "editForm"])->name('blog.edit.form')->whereNumber('id');
+Route::post('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class, "editProcess"])->name('blog.edit.process')->whereNumber('id');
+
+Route::get('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::class, "deleteForm"])->name('blog.delete.form')->whereNumber('id');
 
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])->name('catalogo');
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, "blog"])->name('blog');

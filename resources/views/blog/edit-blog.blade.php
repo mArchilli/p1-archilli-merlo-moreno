@@ -15,9 +15,9 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <label for="title" class="form-label">Título</label>
-                    <input type="text" id="title" name="title" class="form-control" value="{{$blog->titulo}}">
-                    @error('title')
+                    <label for="titulo" class="form-label">Título</label>
+                    <input type="text" id="titulo" name="titulo" class="form-control" value="{{$blog->titulo}}">
+                    @error('titulo')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
@@ -25,9 +25,9 @@
 
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <label for="subTitle" class="form-label">Subtítulo</label>
-                    <input type="text" id="subTitle" name="subTitle" class="form-control" value="{{$blog->subtitulo}}"">
-                    @error('subTitle')
+                    <label for="subtitulo" class="form-label">Subtítulo</label>
+                    <input type="text" id="subtitulo" name="subtitulo" class="form-control" value="{{$blog->subtitulo}}"">
+                    @error('subtitulo')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
@@ -35,15 +35,15 @@
 
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <label for="category" class="form-label">Categoría</label>
-                    <select id="category" name="category" class="form-select">
-                        <option value="" selected>{{$blog->titulo}}</option>
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <select id="categoria" name="categoria" class="form-select">
+                        <option value="" selected>{{$blog->categoria}}</option>
                         <option value="Entretenimiento">Entretenimiento</option>
                         <option value="Literatura">Literatura</option>
                         <option value="Cine">Cine</option>
                         <option value="Educación">Educación</option>
                     </select>
-                    @error('category')
+                    @error('categoria')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
                 </div>
@@ -60,9 +60,9 @@
             </div>
 
             <div class="col-12 mb-3">
-                <label for="image" class="form-label">Imagen</label>
-                <input type="file" id="image" name="image" class="form-control">
-                @error('image')
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="file" id="imagen" name="imagen" class="form-control">
+                @error('imagen')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div> 
