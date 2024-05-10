@@ -16,7 +16,7 @@
                             <div class="card">
                                 <div class="card-body text-center">
                                     <!-- Suponiendo que cada libro tiene una imagen asociada en la base de datos -->
-                                    <p><img class="img-fluid w-50" src="{{ $lib->imagen }}" alt="Imagen del libro"></p>
+                                    <img class="img-fluid w-50" src="{{ $lib->imagen }}" alt="Imagen del libro">
                                     <h4 class="card-title mosta">{{ $lib->titulo }}</h4>
                                     <p class="card-text">{{ $lib->autor }}</p>
                                     <p class="card-text">{{ $lib->editorial }}</p>

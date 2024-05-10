@@ -47,7 +47,7 @@
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
-                                    <img src="{{ asset('images/home/card-potter.jpg') }}"
+                                    <img src="{{ asset('images/blog/card-potter.jpg') }}"
                                         alt="Imagen promocional de harry potter" />
                                 </div>
                                 <div class="text-container">
@@ -64,7 +64,7 @@
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
-                                    <img src="{{ asset('images/home/card-escritura.jpg') }}"
+                                    <img src="{{ asset('images/blog/card-escritura.jpg') }}"
                                         alt="ilustración de una pared de un escritor" />
                                 </div>
                                 <div class="text-container">
@@ -82,7 +82,7 @@
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
-                                    <img src="{{ asset('images/home/card-got.jpg') }}"
+                                    <img src="{{ asset('images/blog/card-got.jpg') }}"
                                         alt="Rey de la noche vs John snow" />
                                 </div>
 
@@ -100,7 +100,7 @@
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
-                                    <img src="{{ asset('images/home/card-dune.jpg') }}"
+                                    <img src="{{ asset('images/blog/card-dune.jpg') }}"
                                         alt="Ilustración en el desierto - Dune" />
                                 </div>
                                 <div class="text-container">
