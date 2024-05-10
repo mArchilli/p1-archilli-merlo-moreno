@@ -12,3 +12,12 @@ php artisan migrate
 
 #Crear seeder
 php artisan make:seeder [NombreSeeder]
+
+#migrar seeder
+php artisan db:seed
+
+#migrar seeder especifico
+php artisan db:seed --class=Nombredelseed
+
+#crear modelo
+php artisan make:model
