@@ -112,4 +112,15 @@ class BlogController extends Controller
         ]);
     }
 
+    public function deleteProcess(int $id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        $blog->delete();
+
+        return redirect()
+            ->route('blogadm')
+            ->with('feedback.message', 'El posteo <b>"' . e($blog->title) . '"</b> se eliminó con éxito.');
+    }
+
 }

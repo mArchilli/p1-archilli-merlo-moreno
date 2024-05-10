@@ -44,7 +44,7 @@
             </tbody>
         </table>
     @else
-        <p>No hay posteos que mostrar actualmente. Podés empezar por <a href="">realizar un posteo</a>.</p>
+        <p>No hay posteos que mostrar actualmente. Podés empezar por <a href="{{ route('blog.create.form') }}">realizar un posteo</a>.</p>
     @endif
 
     

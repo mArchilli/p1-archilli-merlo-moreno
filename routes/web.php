@@ -17,6 +17,8 @@ Route::get('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class,
 Route::post('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class, "editProcess"])->name('blog.edit.process')->whereNumber('id');
 
 Route::get('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::class, "deleteForm"])->name('blog.delete.form')->whereNumber('id');
+Route::post('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::class, "deleteProcess"])->name('blog.delete.process')->whereNumber('id');
+//FORMS ABM - BLOG
 
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])->name('catalogo');
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, "blog"])->name('blog');

@@ -4,7 +4,7 @@
     <x-slot:title>Editar Posteo</x-slot:title>
 
     <div class="container my-2">
-    <h1 class="mb-3">Editar un Post</h1>
+    <h1 class="mb-3">Editar blog</h1>
 
     @if($errors->any())
         <div class="alert alert-danger">Hay errores en los datos del formulario. Por favor, revisalos y volvé a intentar.</div>
@@ -37,7 +37,7 @@
                 <div class="mb-3">
                     <label for="categoria" class="form-label">Categoría</label>
                     <select id="categoria" name="categoria" class="form-select">
-                        <option value="" selected>{{$blog->categoria}}</option>
+                        <option value="{{$blog->categoria}}" selected>{{$blog->categoria}}</option>
                         <option value="Entretenimiento">Entretenimiento</option>
                         <option value="Literatura">Literatura</option>
                         <option value="Cine">Cine</option>
@@ -59,12 +59,17 @@
                 </div>
             </div>
 
-            <div class="col-12 mb-3">
+            <div class="col-12 col-md-6 mb-3">
                 <label for="imagen" class="form-label">Imagen</label>
                 <input type="file" id="imagen" name="imagen" class="form-control">
                 @error('imagen')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
+            </div>
+
+            <div class="col-12 col-md-6 mb-3 ">
+                <p class="form-label">Imagen actual</p>
+                <img src="{{ asset($blog->imagen) }}" alt="Imagen de {{$blog->titulo}}" class="img-fluid">
             </div> 
 
             <div class="col-12 mb-3">
