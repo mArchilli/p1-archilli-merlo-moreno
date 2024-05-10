@@ -15,6 +15,14 @@ class LibroController extends Controller
         ]);
     }
 
+    public function libroadm()
+    {
+        $libroadm = Libro::all();
+        return view('libroadm', [
+            'libroadm' => $libroadm,
+        ]);
+    }
+
     public function view(int $id)
     {
         $libro = Libro::findOrFail($id);
