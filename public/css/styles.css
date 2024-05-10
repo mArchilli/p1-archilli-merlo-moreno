@@ -303,14 +303,10 @@ section {
     transform-style: preserve-3d;
 }
 
-.frontside .card,
-.backside .card {
-    min-height: 312px;
-}
 
 .frontside .card {
     width: 100%;
-    height: 2rem;
+    height: 100%;
 }
 
 @media (max-width: 991.98px) {
