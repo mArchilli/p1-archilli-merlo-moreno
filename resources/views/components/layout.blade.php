@@ -60,7 +60,9 @@
         </div>
 
         <main class="">
-            {{ $slot }}
+            <div class="container  pt-5">
+                {{ $slot }}
+            </div>
         </main>
 
         <footer class="footer border-top pt-5 pt-lg-0 fw-bold ">

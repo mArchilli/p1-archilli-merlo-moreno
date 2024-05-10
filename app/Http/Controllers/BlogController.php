@@ -102,7 +102,7 @@ class BlogController extends Controller
 
         return redirect()
             ->route('blogadm')
-            ->with('feedback.message', 'El post <b>"' . e($input['title']) . '"</b> se editó con éxito.');
+            ->with('feedback.message', 'El post <b>"' . e($input['titulo']) . '"</b> se editó con éxito.');
     }
 
     public function deleteForm(int $id)

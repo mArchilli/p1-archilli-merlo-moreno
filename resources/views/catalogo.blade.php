@@ -6,7 +6,7 @@
 
     <h2 class="fs-3 p-5 m-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
 
-    <div class="container">
+    
         <div class="row">
             @foreach ($libro as $lib)
             <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
@@ -38,6 +38,6 @@
             </div>
             @endforeach
         </div>
-    </div>
+    
 
 </x-layout>

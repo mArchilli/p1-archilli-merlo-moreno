@@ -3,7 +3,7 @@
     <x-slot:title>Panel Blog</x-slot:title>
 
     <h1>Panel de Administracion de Blog</h1>
-    <div class="container">
+    
     @if($blogadm->isNotEmpty())
         <div class="mb-3">
             <a href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
@@ -46,6 +46,6 @@
     @else
         <p>No hay posteos que mostrar actualmente. Podés empezar por <a href="">realizar un posteo</a>.</p>
     @endif
-    </div>
+
     
 </x-layout>
