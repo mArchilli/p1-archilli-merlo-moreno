@@ -2,10 +2,8 @@
 
 <x-slot:title>Login</x-slot:title>
 
-<!-- Section: Design Block -->
 <section class="text-center text-lg-start">
 
-  <!-- Jumbotron -->
   <div class="container py-4">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
@@ -32,7 +30,7 @@
               <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btnespecial btn-block mb-4">
                 Ingresar
               </button>
-    
+
             </form>
           </div>
         </div>
@@ -44,7 +42,6 @@
       </div>
     </div>
   </div>
-  <!-- Jumbotron -->
 </section>
-<!-- Section: Design Block -->
+
 </x-layout>

@@ -57,8 +57,8 @@
                             </li>
 
                             @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('auth.login.form') }}">Iniciar Sesión</a>
+                            <li class="nav-item ">
+                                <a class="btnespecial" href="{{ route('auth.login.form') }}">Iniciar Sesión</a>
                             </li>
                             @else
                             <li class="nav-item">
