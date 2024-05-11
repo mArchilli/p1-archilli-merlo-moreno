@@ -10,10 +10,10 @@
             <div class="col-12 col-lg-8 p-0">
                 <div
                     class="d-flex flex-md-row flex-column align-items-center flex-wrap justify-content-center ps-lg-5 gap-3">
-                    <img class="imgbanner" src="{{ asset('images/libros/1q84-murakami.jpg') }}" alt="">
+                    <img class="imgbanner" src="{{ asset('images/libros/1q84-murakami.jpg') }}" alt="Imagen de Portada de 1q84">
                     <img class="imgbanner" src="{{ asset('images/libros/alicia-en-el-pais-de-las-maravillas.jpg') }}"
-                        alt="">
-                    <img class="imgbanner" src="{{ asset('images/libros/cuentos-imprescindibles.jpg') }}" alt="">
+                        alt="Imagen de Portada de Alicia en el Pais de las Maravillas">
+                    <img class="imgbanner" src="{{ asset('images/libros/cuentos-imprescindibles.jpg') }}" alt="Imagen de Portada de Cuentos Imprescindibles">
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
             <h2 class="mosta p-1 text-center"> Entradas mas recientes</h2>
             <div class="row d-flex flex-wrap container mx-auto px-4 pt-0">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="">
+                    <a href="{{ route('blog') }}">
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="">
+                    <a href="{{ route('blog') }}">
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
@@ -78,7 +78,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="">
+                    <a href="{{ route('blog') }}">
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">
@@ -96,7 +96,7 @@
                     </a>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="">
+                    <a href="{{ route('blog') }}">
                         <div class="card-flyer">
                             <div class="text-box">
                                 <div class="image-box">

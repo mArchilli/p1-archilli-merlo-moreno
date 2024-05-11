@@ -43,14 +43,14 @@
 						<div class="border rounded-3 bg-white p-5">
 							<h3 class="fw-bold mb-0">Nuestro catálogo</h3>
 							<p class="my-4">Navega por nuestra amplia variedad de géneros y encuentra el libro perfecto para cada momento.</p>
-                            <a class="btnespecial" href="">Más Información</a>
+                            <a class="btnespecial" href="{{ route('catalogo') }}">Más Información</a>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="border rounded-3 bg-white p-5">
 							<h3 class="fw-bold mb-0">Empezá hoy</h3>
 							<p class="my-4">Registrate ahora, explorá nuestra vasta biblioteca y participá en nuestro blog interactivo con solo un clic.</p>
-                            <a class="btnespecial" href="">Ingresar</a>
+                            <a class="btnespecial" href="{{ route('login') }}">Ingresar</a>
 						</div>
 					</div>
 				</div>

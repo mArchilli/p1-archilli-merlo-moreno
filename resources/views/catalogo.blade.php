@@ -4,7 +4,7 @@
 <x-layout>
     <x-slot:title>Catálogo</x-slot:title>
 
-    <h2 class="fs-3 p-5 m-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
+    <h2 class="fs-3 p-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
 
     
         <div class="row">
@@ -17,7 +17,7 @@
                                 <div class="card-body text-center">
                                     <!-- Suponiendo que cada libro tiene una imagen asociada en la base de datos -->
                                     <img class="img-fluid w-50" src="{{ $lib->imagen }}" alt="Imagen del libro">
-                                    <h4 class="card-title mosta">{{ $lib->titulo }}</h4>
+                                    <h4 class="card-title mosta pt-3">{{ $lib->titulo }}</h4>
                                     <p class="card-text">{{ $lib->autor }}</p>
                                     <p class="card-text">{{ $lib->editorial }}</p>
                                     <p class="card-text">{{ $lib->anio_publicacion }}</p>
@@ -26,7 +26,7 @@
                         </div>
                         <div class="backside">
                             <div class="card">
-                                <div class="card-body text-center mt-4">
+                                <div class="card-body text-center">
                                     <h4 class="card-title mosta">{{ $lib->titulo }}</h4>
                                     <p class="card-text">{{ $lib->descripcion }}</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Más información</a>
