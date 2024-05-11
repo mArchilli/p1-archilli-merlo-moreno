@@ -31,4 +31,8 @@ class LibroController extends Controller
             'libro' => $libro,
         ]);
     }
+
+    public function createForm(){
+        return view('libros.create-libro');
+    }
 }

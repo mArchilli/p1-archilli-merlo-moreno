@@ -33,7 +33,7 @@ class BlogController extends Controller
     }
 
     public function createForm(){
-        return view('blog.create-blog-form');
+        return view('blog.create-blog');
     }
 
     public function createProcess(Request $request)
