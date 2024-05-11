@@ -3,7 +3,7 @@
     <x-slot:title>Panel libros</x-slot:title>
 
     <h1>Panel de Administracion de libros</h1>
-    
+
     @if($libroadm->isNotEmpty())
         <div class="mb-3">
             <a href="{{ route('libro.create.form') }}">Cargar un nuevo libro</a>
@@ -45,8 +45,8 @@
             </tbody>
         </table>
     @else
-        <p>No hay libros que mostrar actualmente. Podés empezar por <a href="">cargar un libro</a>.</p>
+        <p>No hay libros que mostrar actualmente. Podés empezar por <a href="{{ route('libro.create.form') }}">cargar un libro</a>.</p>
     @endif
 
-    
+
 </x-layout>
