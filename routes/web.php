@@ -32,8 +32,11 @@ Route::get('/libroadm', [\App\Http\Controllers\LibroController::class, "libroadm
 Route::get('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createForm"])->name('libro.create.form');
 Route::post('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createProcess"])->name('libro.create.process');
 
-Route::get('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editForm"])->name('libro.edit.form');
-Route::post('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editProcess"])->name('libro.edit.process');
+Route::get('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editForm"])->name('libro.edit.form')->whereNumber('id');
+Route::post('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editProcess"])->name('libro.edit.process')->whereNumber('id');
+
+Route::get('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::class, "deleteForm"])->name('libro.delete.form')->whereNumber('id');
+Route::post('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::class, "deleteProcess"])->name('libro.delete.process')->whereNumber('id');
 
 //FORMS ABM - LIBRO
 

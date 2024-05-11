@@ -117,4 +117,22 @@ class LibroController extends Controller
             ->with('feedback.message', 'El libro <b>"' . e($input['titulo']) . '"</b> se editó con éxito.');
     }
 
+    public function deleteForm(int $id)
+    {
+        return view('libros.delete-libro', [
+            'libro' => Libro::findOrFail($id),
+        ]);
+    }
+
+    public function deleteProcess(int $id)
+    {
+        $libro = Libro::findOrFail($id);
+
+        $libro->delete();
+
+        return redirect()
+            ->route('libroadm')
+            ->with('feedback.message', 'El libro <b>"' . e($libro->title) . '"</b> se eliminó con éxito.');
+    }
+
 }

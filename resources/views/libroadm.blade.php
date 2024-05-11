@@ -36,8 +36,7 @@
                     <td>
                         <div class="d-flex">
                             <a href="{{ route('libro.edit.form', ['id' => $libro->id]) }}" class="ms-2 btn btn-secondary">Editar</a>
-                            <a href="" class="ms-2 btn btn-danger">Eliminar</a>
-        
+                            <a href="{{ route('libro.delete.form', ['id' => $libro->id]) }}" class="ms-2 btn btn-danger">Eliminar</a>
                         </div>
                     </td>
                 </tr>
