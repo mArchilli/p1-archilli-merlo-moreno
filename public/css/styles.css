@@ -326,3 +326,13 @@ section {
         padding-right: 12rem;
     }
 }
+
+.cards-blog{
+    min-height: 815px;
+}
+
+@media (max-width: 768px) {
+    .cards-blog {
+        min-height: 500px;
+    }
+}
