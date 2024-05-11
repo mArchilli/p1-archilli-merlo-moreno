@@ -45,8 +45,9 @@
 
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <label for="anio" class="form-label">Año</label>
-                    <input type="date" id="anio" name="anio" class="form-control" value="{{ old('anio') }}" max="{{ date('Y') }}-12-31" placeholder="Seleccione el año">
+                    <label for="anio_publicacion" class="form-label">Año</label>
+                    <input type="number" id="anio_publicacion" name="anio_publicacion" class="form-control" 
+                        value="{{ old('anio_publicacion') }}" placeholder="Ingrese el año (máximo 4 dígitos)">
                     @error('anio')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror

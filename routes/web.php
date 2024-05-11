@@ -30,6 +30,7 @@ Route::post('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::cla
 Route::get('/libroadm', [\App\Http\Controllers\LibroController::class, "libroadm"])->name('libroadm');
 
 Route::get('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createForm"])->name('libro.create.form');
+Route::post('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createProcess"])->name('libro.create.process');
 
 //FORMS ABM - LIBRO
 
