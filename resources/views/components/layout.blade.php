@@ -53,13 +53,19 @@
                                     Nosotros</a>
                             </li>
                         </ul>
-                        <a href="{{ route('login') }}" class="btnespecial">Ingresar</a>
+                        <a href="{{ route('auth.login.form') }}" class="btnespecial">Ingresar</a>
                     </div>
                 </div>
             </nav>
         </div>
 
         <main class="">
+
+            @if(session()->has('feedback.message'))
+
+            <div class="alert alert-{{ session()->get('feedback.type', 'success') }}">{!! session()->get('feedback.message') !!}</div>
+            @endif
+
             <div class="container  pt-5">
                 {{ $slot }}
             </div>

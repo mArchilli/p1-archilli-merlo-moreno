@@ -7,7 +7,7 @@ Route::get('/', [\App\Http\Controllers\IndexController::class, "index"])->name('
 // Route::get('/catalogo', [\App\Http\Controllers\IndexController::class, "catalogo"])->name('catalogo');
 // Route::get('/blog', [\App\Http\Controllers\IndexController::class, "blog"])->name('blog');
 Route::get('/about', [\App\Http\Controllers\IndexController::class, "about"])->name('about');
-Route::get('/login', [\App\Http\Controllers\IndexController::class, "login"])->name('login');
+// Route::get('/login', [\App\Http\Controllers\IndexController::class, "login"])->name('login');
 Route::get('/admin', [\App\Http\Controllers\IndexController::class, "admin"])->name('admin');
 
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])->name('catalogo');
@@ -40,6 +40,10 @@ Route::post('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::c
 
 //FORMS ABM - LIBRO
 
+// Rutas de autenticación
+Route::get('/iniciar-sesion', [\App\Http\Controllers\AuthController::class, "loginForm"])->name('auth.login.form');
+Route::post('/iniciar-sesion', [\App\Http\Controllers\AuthController::class, "loginProcess"])->name('auth.login.process');
+Route::get('/cerrar-sesion', [\App\Http\Controllers\AuthController::class, "logoutProcess"])->name('auth.logout.process');
 
 
 
