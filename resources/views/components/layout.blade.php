@@ -26,7 +26,9 @@
         <div class="fixed">
             <nav class="navbar navbar-expand-lg bg-dark fixed-top px-3 py-3" data-bs-theme="dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-white" href="{{ route('index') }}"><h1 class="fs-5 mb-0">LibraLink</h1></a>
+                    <a class="navbar-brand text-white" href="{{ route('index') }}">
+                        <h1 class="fs-5 mb-0">LibraLink</h1>
+                    </a>
                     <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -48,12 +50,28 @@
                                 <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
                                     href="{{ route('blog') }}">Blog</a>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link text-white pb-3 pe-lg-4 py-lg-2" href="{{ route('about') }}">Sobre
-                                    Nosotros</a>
+                                <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
+                                    href="{{ route('about') }}">Sobre Nosotros</a>
                             </li>
+
+                            @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('auth.login.form') }}">Iniciar Sesión</a>
+                            </li>
+                            @else
+                            <li class="nav-item">
+                                <form action="{{ route('auth.logout.process') }}" method="POST">
+                                    @csrf
+                                    {{-- auth()->user() retorna el modelo de Eloquent del usuario. --}}
+                                    <button class="nav-link">{{ auth()->user()->email }} (Cerrar Sesión)</button>
+                                </form>
+                            </li>
+                            {{-- @endif --}}
+                            @endguest
                         </ul>
-                        <a href="{{ route('auth.login.form') }}" class="btnespecial">Ingresar</a>
+                        {{-- <a href="{{ route('auth.login.form') }}" class="btnespecial">Ingresar</a> --}}
                     </div>
                 </div>
             </nav>
@@ -63,7 +81,8 @@
 
             @if(session()->has('feedback.message'))
 
-            <div class="alert alert-{{ session()->get('feedback.type', 'success') }}">{!! session()->get('feedback.message') !!}</div>
+            <div class="alert alert-{{ session()->get('feedback.type', 'success') }}">{!!
+                session()->get('feedback.message') !!}</div>
             @endif
 
             <div class="container  pt-5">

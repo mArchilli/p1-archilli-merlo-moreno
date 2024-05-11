@@ -24,7 +24,19 @@ class AuthController extends Controller
         }
 
         return redirect()
-        ->route('index')
+        ->route('blogadm')
         ->with('feedback.message', 'Inicio exitoso. ¡Hola de nuevo!');
+    }
+
+    public function logoutProcess(Request $request)
+    {
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()
+        ->route('auth.login.form')
+        ->with('feedback.message', 'Cierre de sesión correcto. ¡Te esperamos pronto!');
     }
 }

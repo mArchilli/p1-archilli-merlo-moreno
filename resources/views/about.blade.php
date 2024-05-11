@@ -11,13 +11,13 @@
 				<div class="ms-md-2 ms-lg-5">
 					<span class="text-muted">Nuestra historia</span>
 					<h2 class="display-5 fw-bold">Sobre Nosotros</h2>
-					<p class="lead">Libralink es una innovadora plataforma digital argentina que ofrece 
-                        suscripciones mensuales para el acceso a una extensa variedad de libros electrónicos 
-                        en formatos online y offline. Nuestro catálogo abarca desde literatura de ciencia 
-                        ficción y terror hasta romances y cuentos infantiles, satisfaciendo los gustos de cada 
+					<p class="lead">Libralink es una innovadora plataforma digital argentina que ofrece
+                        suscripciones mensuales para el acceso a una extensa variedad de libros electrónicos
+                        en formatos online y offline. Nuestro catálogo abarca desde literatura de ciencia
+                        ficción y terror hasta romances y cuentos infantiles, satisfaciendo los gustos de cada
                         lector.</p>
-					<p class="lead mb-0">Además, nuestra plataforma incluye un blog interactivo donde los 
-                        usuarios pueden escribir reseñas, compartir opiniones y debatir sobre sus lecturas 
+					<p class="lead mb-0">Además, nuestra plataforma incluye un blog interactivo donde los
+                        usuarios pueden escribir reseñas, compartir opiniones y debatir sobre sus lecturas
                         favoritas.</p>
 				</div>
 			</div>
@@ -34,7 +34,7 @@
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-md-8">
 				<h2 class="fw-bold display-5">Descubrí lo que tenemos para ti</h2>
-				<p class="lead mb-4">Explora nuestra diversa selección de libros 
+				<p class="lead mb-4">Explora nuestra diversa selección de libros
                     y sumérgete en tu próxima gran aventura literaria.</p>
 			</div>
 			<div class="col-lg-8">
@@ -50,7 +50,7 @@
 						<div class="border rounded-3 bg-white p-5">
 							<h3 class="fw-bold mb-0">Empezá hoy</h3>
 							<p class="my-4">Registrate ahora, explorá nuestra vasta biblioteca y participá en nuestro blog interactivo con solo un clic.</p>
-                            <a class="btnespecial" href="{{ route('login') }}">Ingresar</a>
+                            <a class="btnespecial" href="{{ route('auth.login.form') }}">Ingresar</a>
 						</div>
 					</div>
 				</div>
@@ -65,7 +65,7 @@
 			<div class="col-lg-8 col-xl-7">
 				<span class="text-muted">F.A.Q</span>
 				<h2 class="display-5 fw-bold">Preguntas Frecuentes</h2>
-				<p class="lead">Encuentra respuestas rápidas a tus dudas más comunes y obtén más información sobre 
+				<p class="lead">Encuentra respuestas rápidas a tus dudas más comunes y obtén más información sobre
                     cómo aprovechar al máximo nuestra plataforma.</p>
 			</div>
 		</div>
@@ -130,5 +130,5 @@
 		</div>
 	</div>
 </section>
-    
+
 </x-layout>

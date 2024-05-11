@@ -4,9 +4,15 @@
 <x-layout>
     <x-slot:title>Catálogo</x-slot:title>
 
+    @auth
+    <div class="mb-3">
+        <a href="{{ route('libro.create.form') }}">Cargar nuevo libro</a>
+    </div>
+    @endauth
+
     <h2 class="fs-3 p-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
 
-    
+
         <div class="row">
             @foreach ($libro as $lib)
             <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
@@ -38,6 +44,6 @@
             </div>
             @endforeach
         </div>
-    
+
 
 </x-layout>
