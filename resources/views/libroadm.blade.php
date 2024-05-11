@@ -35,7 +35,7 @@
                     <td>{{ $libro->descripcion }}</td>
                     <td>
                         <div class="d-flex">
-                            <a href="" class="ms-2 btn btn-secondary">Editar</a>
+                            <a href="{{ route('libro.edit.form', ['id' => $libro->id]) }}" class="ms-2 btn btn-secondary">Editar</a>
                             <a href="" class="ms-2 btn btn-danger">Eliminar</a>
         
                         </div>

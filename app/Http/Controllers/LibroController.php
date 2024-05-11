@@ -72,4 +72,49 @@ class LibroController extends Controller
             ->with('feedback.message', 'El libro <b>"' . e($input['titulo']) . '"</b> se cargo con éxito.');
     }
 
+    public function editForm(int $id)
+    {
+        return view('libros.edit-libro', [
+            'libro' => Libro::findOrFail($id),
+        ]);
+    }
+
+    public function editProcess(int $id, Request $request)
+    {
+        $request->validate([
+            'titulo' => 'required|min:5',
+            'autor' => 'required|min:2',
+            'editorial' => 'required|min:2',
+            'anio_publicacion' => 'required|min:4|max:4',
+            'isbn' => 'required|min:10|max:13',
+            'descripcion' => 'required|min:5',
+            'imagen'=> 'required'
+        ], [
+            'titulo.min' => 'El título debe tener al menos :min caracteres.',
+            'titulo.required' => 'El titulo debe ser ingresado',
+            'autor.min' => 'El autor debe tener al menos :min caracteres.',
+            'autor.required' => 'El autor debe ser ingresado',
+            'editorial.min' => 'El editorial debe tener al menos :min caracteres.',
+            'editorial.required' => 'El editorial debe ser ingresado',
+            'anio_publicacion.required' => 'El año de publicacion debe ser ingresado',
+            'anio_publicacion.min' => 'El año de publicacion se compone de minimo :min. caracteres',
+            'anio_publicacion.max' => 'El año de publicacion se compone de maximo :max. caracteres',
+            'isbn.min' => 'El ISBN se compone de minimo :min. caracteres',
+            'isbn.max' => 'El ISBN se compone de maximo :max. caracteres',
+            'descripcion.min' => 'La descripcion debe tener al menos :min caracteres.',
+            'descripcion.required' => 'La descripcion debe ser ingresado',
+            'imagen.required'=>'La imagen debe ser cargada'
+        ]);
+
+        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
+
+        $libro = Libro::findOrFail($id);
+
+        $libro->update($input);
+
+        return redirect()
+            ->route('libroadm')
+            ->with('feedback.message', 'El libro <b>"' . e($input['titulo']) . '"</b> se editó con éxito.');
+    }
+
 }

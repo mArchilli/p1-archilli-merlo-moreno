@@ -32,6 +32,9 @@ Route::get('/libroadm', [\App\Http\Controllers\LibroController::class, "libroadm
 Route::get('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createForm"])->name('libro.create.form');
 Route::post('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createProcess"])->name('libro.create.process');
 
+Route::get('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editForm"])->name('libro.edit.form');
+Route::post('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editProcess"])->name('libro.edit.process');
+
 //FORMS ABM - LIBRO
 
 
