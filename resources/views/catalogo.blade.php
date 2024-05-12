@@ -34,7 +34,7 @@
                                 <div class="card-body text-center">
                                     <h4 class="card-title mosta">{{ $lib->titulo }}</h4>
                                     <p class="card-text">{{ $lib->descripcion }}</p>
-                                    <a href="#" class="btnespecial btn-sm "><i class="fa fa-plus"> Más información</i> </a>
+                                    <a href="{{ route('catalogo.view.book', ['id' => $lib->id]) }}" class="btnespecial btn-sm "><i class="fa fa-plus"> Más información</i> </a>
                                 </div>
                             </div>
                         </div>

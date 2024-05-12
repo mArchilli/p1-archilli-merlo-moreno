@@ -15,6 +15,10 @@ Route::get('/admin', [\App\Http\Controllers\IndexController::class, "admin"])
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])
     ->name('catalogo');
 
+Route::get('/catalogo/{id}/libro', [\App\Http\Controllers\LibroController::class, "viewBook"])
+    ->name('catalogo.view.book')
+    ->whereNumber('id');
+
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, "blog"])
     ->name('blog');
 

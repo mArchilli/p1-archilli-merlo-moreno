@@ -32,6 +32,11 @@ class LibroController extends Controller
         ]);
     }
 
+    public function viewBook(int $id){
+        return view('libro', [
+            'libro' => Libro::findOrFail($id)]);
+    }
+
     public function createForm(){
         return view('libros.create-libro');
     }

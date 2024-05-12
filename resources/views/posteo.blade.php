@@ -8,12 +8,12 @@
 
     <h1 class="text-center pb-3">{{$blog->titulo }}</h1>
 
-    <div class="row ">
+    <div class="row">
         <div class="col-12">
             <div class="card mb-3">
                 <div class="row g-0 flex-row">
                     <div class="col-12 col-xl-6">
-                        <img class="img-fluid" src="{{asset($blog->imagen)}}" alt="Imagen del libro">
+                        <img class="img-fluid" src="{{asset($blog->imagen)}}" alt="Imagen de {{ $blog->titulo }}">
                     </div>
                     <div class="col-12 col-xl-6">
                         <div class="card-body">
@@ -30,7 +30,4 @@
             </div>
         </div>
     </div>
-
-
-    <!-- otra opción: https://codepen.io/cristinaconacel/pen/dgmjKK -->
 </x-layout>
