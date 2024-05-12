@@ -18,6 +18,10 @@ Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, "blog"])
     ->name('blog');
 
+Route::get('/blog/{id}/post', [\App\Http\Controllers\BlogController::class, "viewPost"])
+    ->name('blog.view.post')
+    ->whereNumber('id');
+
 // Blog ABM
 Route::get('/blogadm', [\App\Http\Controllers\BlogController::class, "blogadm"])
     ->name('blogadm')

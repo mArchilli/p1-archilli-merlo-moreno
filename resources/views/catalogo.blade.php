@@ -19,14 +19,13 @@
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <!-- Suponiendo que cada libro tiene una imagen asociada en la base de datos -->
-                                    <img class="img-fluid w-50" src="{{ $lib->imagen }}" alt="Imagen del libro">
-                                    <h4 class="card-title mosta pt-3">{{ $lib->titulo }}</h4>
-                                    <p class="card-text">{{ $lib->autor }}</p>
-                                    <p class="card-text">{{ $lib->editorial }}</p>
-                                    <p class="card-text">{{ $lib->anio_publicacion }}</p>
+                            <div class="card cardLibros">
+                                <div class="card-body text-center d-flex flex-column justify-content-between">
+                                    <img class="img-fluid" src="{{ $lib->imagen }}" alt="Imagen del libro">
+                                    <h4 class="card-title mosta pt-3 my-0">{{ $lib->titulo }}</h4>
+                                    <p class="card-text my-0 py-0">{{ $lib->autor }}</p>
+                                    <p class="card-text my-0 py-0">{{ $lib->editorial }}</p>
+                                    <p class="card-text my-0 py-0">{{ $lib->anio_publicacion }}</p>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +34,7 @@
                                 <div class="card-body text-center">
                                     <h4 class="card-title mosta">{{ $lib->titulo }}</h4>
                                     <p class="card-text">{{ $lib->descripcion }}</p>
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Más información</a>
+                                    <a href="#" class="btnespecial btn-sm "><i class="fa fa-plus"> Más información</i> </a>
                                 </div>
                             </div>
                         </div>

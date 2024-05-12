@@ -327,12 +327,9 @@ section {
     }
 }
 
-.cards-blog{
-    min-height: 815px;
-}
 
-@media (max-width: 768px) {
-    .cards-blog {
-        min-height: 500px;
+@media (min-width: 1024px) {
+    .cardLibros{
+        min-height: 820px;
     }
 }

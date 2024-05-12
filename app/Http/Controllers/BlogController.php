@@ -32,6 +32,11 @@ class BlogController extends Controller
         ]);
     }
 
+    public function viewPost(int $id){
+        return view('posteo', [
+            'blog' => Blog::findOrFail($id)]);
+    }
+
     public function createForm(){
         return view('blog.create-blog');
     }

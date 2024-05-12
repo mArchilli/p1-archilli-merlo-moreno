@@ -6,6 +6,8 @@
 
     <x-slot:title>Blog</x-slot:title>
 
+    <h1 class="text-center pb-3">Blog de noticias</h1>
+
     {{-- Prueba de auth --}}
     @auth
     <div class="mb-3">
@@ -25,9 +27,12 @@
                             <h5 class="card-title">{{ $posteo->titulo }}</h5>
                             <p class="card-text">{{ $posteo->subtitulo }}</p>
                             <p class="card-text">{{ $posteo->categoria }}</p>
-                            <p class="card-text">{{ $posteo->texto }}</p>
+                            <p class="card-text">{{ Str::limit($posteo->texto, 150) }}</p>
+                            <div class="card-text my-2">
+                                <a href="{{ route('blog.view.post', ['id' => $posteo->id])}}" class="btnespecial btn-sm"><i class="fa fa-plus">Ver mas</i> </a>
+                            </div>
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted">Last updated a few mins ago</small>
                             </p>
                         </div>
                     </div>
