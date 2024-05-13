@@ -93,7 +93,6 @@ class LibroController extends Controller
             'anio_publicacion' => 'required|min:4|max:4',
             'isbn' => 'required|min:10|max:13',
             'descripcion' => 'required|min:5',
-            'imagen'=> 'required'
         ], [
             'titulo.min' => 'El título debe tener al menos :min caracteres.',
             'titulo.required' => 'El titulo debe ser ingresado',
@@ -108,10 +107,9 @@ class LibroController extends Controller
             'isbn.max' => 'El ISBN se compone de maximo :max. caracteres',
             'descripcion.min' => 'La descripcion debe tener al menos :min caracteres.',
             'descripcion.required' => 'La descripcion debe ser ingresado',
-            'imagen.required'=>'La imagen debe ser cargada'
         ]);
 
-        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
+        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion']);
 
         $libro = Libro::findOrFail($id);
 
