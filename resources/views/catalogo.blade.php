@@ -4,14 +4,13 @@
 <x-layout>
     <x-slot:title>Catálogo</x-slot:title>
 
+    <h2 class="fs-3 p-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
+
     @auth
-    <div class="mb-3">
+    <div class="mb-5 d-flex justify-content-end">
         <a class="btnespecial" href="{{ route('libro.create.form') }}">Cargar nuevo libro</a>
     </div>
     @endauth
-
-    <h2 class="fs-3 p-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
-
 
     <div class="row">
     @foreach ($libro as $lib)
