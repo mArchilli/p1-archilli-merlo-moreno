@@ -10,8 +10,8 @@
 
     {{-- Prueba de auth --}}
     @auth
-    <div class="mb-3">
-        <a href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
+    <div class="my-5">
+        <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
     </div>
     @endauth
     <div class="row ">
@@ -23,16 +23,16 @@
                         <img class="img-fluid" src="{{ $posteo->imagen }}" alt="Imagen del libro">
                     </div>
                     <div class="col-12">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $posteo->titulo }}</h5>
+                        <div class="card-body bg-dark text-white">
+                            <h5 class="mosta fs-4">{{ $posteo->titulo }}</h5>
                             <p class="card-text">{{ $posteo->subtitulo }}</p>
                             <p class="card-text">{{ $posteo->categoria }}</p>
                             <p class="card-text">{{ Str::limit($posteo->texto, 150) }}</p>
-                            <div class="card-text my-2">
+                            <div class="card-text my-4 d-flex justify-content-end">
                                 <a href="{{ route('blog.view.post', ['id' => $posteo->id])}}" class="btnespecial btn-sm"><i class="fa fa-plus">Ver mas</i> </a>
                             </div>
                             <p class="card-text d-flex justify-content-end">
-                            <small class="text-muted">{{ $posteo->created_at }}</small>
+                            <small class="text-white">{{ $posteo->created_at }}</small>
                             </p>
                         </div>
                     </div>

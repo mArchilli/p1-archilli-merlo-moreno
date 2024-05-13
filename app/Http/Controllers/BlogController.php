@@ -86,7 +86,6 @@ class BlogController extends Controller
             'categoria' => 'required',
             'autor' => 'required|min:2',
             'texto' => 'required|min:5',
-            'imagen'=> 'required'
         ], [
             'titulo.min' => 'El título debe tener al menos :min caracteres.',
             'titulo.required' => 'El titulo debe ser ingresado',
@@ -96,10 +95,9 @@ class BlogController extends Controller
             'autor.min' => 'El autor debe tener al menos :min caracteres.',
             'autor.required' => 'El autor debe ser ingresado',
             'texto.min' => 'La publicacion debe contener al menos :min caracteres.',
-            'imagen.required'=>'La imagen debe ser cargada'
         ]);
 
-        $input = $request->only(['titulo', 'subtitulo', 'categoria', 'autor', 'texto', 'imagen']);
+        $input = $request->only(['titulo', 'subtitulo', 'categoria', 'autor', 'texto',]);
 
         $posteo = Blog::findOrFail($id);
 
