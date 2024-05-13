@@ -1,4 +1,4 @@
-<x-layout>
+<x-layoutadmin>
 
     <x-slot:title>Administracion</x-slot:title>
 
@@ -14,4 +14,4 @@
         </div>
     </div>
 
-</x-layout>
+</x-layoutadmin>

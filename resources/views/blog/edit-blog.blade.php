@@ -1,6 +1,6 @@
 /** @var \Illuminate\Support\ViewErrorBag $errors */
 ?>
-<x-layout>
+<x-layoutadmin>
     <x-slot:title>Editar Posteo</x-slot:title>
 
     <div class="container my-2">
@@ -81,4 +81,4 @@
     </div>
 
     
-</x-layout>
+</x-layoutadmin>

@@ -1,6 +1,6 @@
 /** @var \Illuminate\Support\ViewErrorBag $errors */
 ?>
-<x-layout>
+<x-layoutadmin>
     <x-slot:title>Nuevo Post</x-slot:title>
 
     <div class="container my-2">
