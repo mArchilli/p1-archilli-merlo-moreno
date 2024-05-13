@@ -10,7 +10,8 @@ Route::get('/about', [\App\Http\Controllers\IndexController::class, "about"])
     ->name('about');
 
 Route::get('/admin', [\App\Http\Controllers\IndexController::class, "admin"])
-    ->name('admin');
+    ->name('admin')
+    ->middleware('auth');
 
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])
     ->name('catalogo');
