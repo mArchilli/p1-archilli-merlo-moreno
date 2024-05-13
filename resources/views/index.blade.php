@@ -1,3 +1,7 @@
+@php
+        $librosAleatorios = $libro->shuffle()->take(3);
+@endphp
+
 <x-layout>
     <x-slot:title>Home</x-slot:title>
 
@@ -8,14 +12,14 @@
                     distancia</h2>
             </div>
             <div class="col-12 col-lg-8 p-0">
-            @foreach ($libro as $lib)
-                <div
-                    class="d-flex flex-md-row flex-column align-items-center flex-wrap justify-content-center ps-lg-5 gap-3">
-                    <img class="imgbanner" src="{{ $lib->imagen }}" alt="Imagen del libro">
-                </div>
+    <div class="d-flex flex-md-row flex-column align-items-center flex-wrap justify-content-center ps-lg-5 gap-3">
+        @foreach ($librosAleatorios as $lib)
+            <div class="p-2">
+                <img class="imgbanner" src="{{ $lib->imagen }}" alt="Imagen del libro">
             </div>
-        </div>
         @endforeach
+    </div>
+</div>
 
         <div class="row align-items-center">
             <div class="col-12 col-md-6">
