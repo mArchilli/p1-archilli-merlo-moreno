@@ -81,14 +81,18 @@
 
         <main class="">
 
+            <div class="container  pt-5">
             @if(session()->has('feedback.message'))
 
-            <div class="alert alert-{{ session()->get('feedback.type', 'success') }}">{!!
-                session()->get('feedback.message') !!}</div>
+            <div class=" d-flex justify-content-between fade show alert alert-{{ session()->get('feedback.type', 'success') }}">{!!
+                session()->get('feedback.message') !!}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
             @endif
 
-            <div class="container  pt-5">
-                {{ $slot }}
+
+            {{ $slot }}
+
             </div>
         </main>
 
