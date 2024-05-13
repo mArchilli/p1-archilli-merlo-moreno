@@ -75,7 +75,7 @@
 				<p class="pb-3 pt-2">Si tenés alguna pregunta adicional o necesitas más información, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
                 <a class="btnespecial" href="#">Contáctanos</a>
 			</div>
-			<div class="col-md-7">
+			<div class="col-md-7 mt-4">
 				<div class="accordion" id="Questions-accordion">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="Questions-headingOne"><button aria-controls="Questions-collapseOne" aria-expanded="false" class="accordion-button collapsed bg-light" data-bs-target="#Questions-collapseOne" data-bs-toggle="collapse" type="button">
