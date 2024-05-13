@@ -6,11 +6,11 @@
 
     <x-slot:title>Blog</x-slot:title>
 
-    <h1 class="text-center pb-3">Blog de noticias</h1>
+    <h1 class="mosta text-center py-5">Blog de noticias</h1>
 
     {{-- Prueba de auth --}}
     @auth
-    <div class="my-5">
+    <div class="my-4 d-flex justify-content-center">
         <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
     </div>
     @endauth

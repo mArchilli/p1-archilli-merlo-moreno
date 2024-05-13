@@ -2,14 +2,14 @@
 
     <x-slot:title>Panel Blog</x-slot:title>
 
-    <h1 class="mosta">Panel de Administracion de Blog</h1>
+    <h1 class="mosta mt-3">Panel de Administracion de Blog</h1>
     
     @if($blogadm->isNotEmpty())
         <div class="my-3 d-flex justify-content-end">
             <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
         </div>
 
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered my-5">
             <thead>
                 <tr>
                     <th class="text-white bg-dark">ID</th>
@@ -32,7 +32,7 @@
                     <td>{{ $posteo->subtitulo }}</td>
                     <td>{{ $posteo->categoria }}</td>
                     <td>{{ $posteo->autor }}</td>
-                    <td>{{ $posteo->texto }}</td>
+                    <td> {{ Str::limit($posteo->texto, 150) }}</td>
                     <td>
                         <div class="d-flex">
                             <a href="{{ route('blog.edit.form', ['id' => $posteo->id]) }}" class="ms-2 btn btn-secondary">Editar</a>

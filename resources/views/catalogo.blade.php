@@ -7,7 +7,7 @@
     <h2 class="fs-3 p-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
 
     @auth
-    <div class="mb-5 d-flex justify-content-end">
+    <div class="mb-5 d-flex justify-content-center">
         <a class="btnespecial" href="{{ route('libro.create.form') }}">Cargar nuevo libro</a>
     </div>
     @endauth

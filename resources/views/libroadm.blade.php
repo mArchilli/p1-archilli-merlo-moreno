@@ -5,7 +5,7 @@
     <h1 class="mosta">Panel de Administracion de libros</h1>
 
     @if($libroadm->isNotEmpty())
-        <div class="mb-3 d-flex justify-content-end">
+        <div class="mb-4 d-flex justify-content-end">
             <a class="btnespecial" href="{{ route('libro.create.form') }}">Cargar un nuevo libro</a>
         </div>
 
