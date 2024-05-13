@@ -10,7 +10,7 @@
 
     {{-- Prueba de auth --}}
     @auth
-    <div class="my-4 d-flex justify-content-center">
+    <div class="mb-5 mt-2 d-flex justify-content-center">
         <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
     </div>
     @endauth
