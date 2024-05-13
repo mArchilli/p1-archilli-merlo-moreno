@@ -115,7 +115,6 @@ body {
 /*----  Main Style  ----*/
 #cards_landscape_wrap-2.row {
     text-align: center;
-    background: #f7f7f7;
 }
 #cards_landscape_wrap-2 .container {
     padding-top: 80px;
@@ -129,7 +128,6 @@ body {
     border-radius: 5px;
 }
 #cards_landscape_wrap-2 .card-flyer .image-box {
-    background: #ffffff;
     overflow: hidden;
     box-shadow: 0px 2px 15px rgba(191, 147, 147, 0.5);
     border-radius: 5px;
@@ -212,9 +210,6 @@ body {
 }
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-#team {
-    background: #eee !important;
-}
 
 .btn-primary:hover,
 .btn-primary:focus {
@@ -224,7 +219,6 @@ body {
 
 #team .card {
     border: none;
-    background: #ffffff;
 }
 
 .image-flip:hover .backside,
@@ -270,7 +264,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: white;
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -303,6 +296,12 @@ body {
 .frontside .card {
     width: 100%;
     height: 100%;
+    min-height: 600px;
+}
+
+.backside{
+    min-height: 600px;
+    width: 100%;
 }
 
 .libroslogin{
@@ -328,8 +327,3 @@ body {
 }
 
 
-@media (min-width: 1024px) {
-    .cardLibros{
-        min-height: 820px;
-    }
-}
