@@ -8,15 +8,14 @@
                     distancia</h2>
             </div>
             <div class="col-12 col-lg-8 p-0">
+            @foreach ($libro as $lib)
                 <div
                     class="d-flex flex-md-row flex-column align-items-center flex-wrap justify-content-center ps-lg-5 gap-3">
-                    <img class="imgbanner" src="{{ asset('images/libros/1q84-murakami.jpg') }}" alt="Imagen de Portada de 1q84">
-                    <img class="imgbanner" src="{{ asset('images/libros/alicia-en-el-pais-de-las-maravillas.jpg') }}"
-                        alt="Imagen de Portada de Alicia en el Pais de las Maravillas">
-                    <img class="imgbanner" src="{{ asset('images/libros/cuentos-imprescindibles.jpg') }}" alt="Imagen de Portada de Cuentos Imprescindibles">
+                    <img class="imgbanner" src="{{ $lib->imagen }}" alt="Imagen del libro">
                 </div>
             </div>
         </div>
+        @endforeach
 
         <div class="row align-items-center">
             <div class="col-12 col-md-6">
