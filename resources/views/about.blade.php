@@ -9,8 +9,7 @@
 			</div>
 			<div class="col-md-6 offset-md-1">
 				<div class="ms-md-2 ms-lg-5">
-					<span class="text-muted">Nuestra historia</span>
-					<h2 class="display-5 fw-bold">Sobre Nosotros</h2>
+					<h2 class="mosta display-5 fw-bold py-2">Sobre Nosotros</h2>
 					<p class="lead">Libralink es una innovadora plataforma digital argentina que ofrece
                         suscripciones mensuales para el acceso a una extensa variedad de libros electrónicos
                         en formatos online y offline. Nuestro catálogo abarca desde literatura de ciencia
@@ -33,7 +32,7 @@
 	<div class="container">
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-md-8">
-				<h2 class="fw-bold display-5">Descubrí lo que tenemos para ti</h2>
+				<h2 class="mosta pb-4 fw-bold display-5">Descubrí lo que tenemos para ti</h2>
 				<p class="lead mb-4">Explora nuestra diversa selección de libros
                     y sumérgete en tu próxima gran aventura literaria.</p>
 			</div>
@@ -64,7 +63,7 @@
 		<div class="row justify-content-center text-center mb-3">
 			<div class="col-lg-8 col-xl-7">
 				<span class="text-muted">F.A.Q</span>
-				<h2 class="display-5 fw-bold">Preguntas Frecuentes</h2>
+				<h2 class="mosta display-5 fw-bold pb-3">Preguntas Frecuentes</h2>
 				<p class="lead">Encuentra respuestas rápidas a tus dudas más comunes y obtén más información sobre
                     cómo aprovechar al máximo nuestra plataforma.</p>
 			</div>
