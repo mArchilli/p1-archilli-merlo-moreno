@@ -8,7 +8,7 @@
     
         <div class="row py-lg-5 p-0">
             <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center py-5 py-lg-0">
-                <h2 class="font-fantasy px-5 ps-lg-5">Un mundo de fantasía a un <span class="mostaza">click</span> de
+                <h2 class="fs-1 font-fantasy px-5 ps-lg-5">Un mundo de fantasía a un <span class="mostaza">click</span> de
                     distancia</h2>
             </div>
             <div class="col-12 col-lg-8 p-0">
