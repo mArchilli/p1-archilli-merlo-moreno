@@ -4,7 +4,7 @@
     <x-slot:title>Editar Posteo</x-slot:title>
 
     <div class="container my-2">
-    <h1 class="mb-3">Editar blog</h1>
+    <h1 class="mb-3 mosta">Editar blog</h1>
 
     @if($errors->any())
         <div class="alert alert-danger">Hay errores en los datos del formulario. Por favor, revisalos y volvé a intentar.</div>
@@ -81,7 +81,7 @@
             </div>  
         </div>
         
-        <button type="submit" class="btn btn-primary w-100 py-2">Actualizar</button>
+        <button type="submit" class="btnespecial w-100 py-2">Actualizar</button>
     </form>
 
     </div>

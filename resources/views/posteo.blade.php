@@ -4,9 +4,9 @@
 
 <x-layout>
 
-    <x-slot:title>Post {{$blog->titulo }}</x-slot:title>
+    <x-slot:title>Post {{ $blog->titulo }}</x-slot:title>
 
-    <h1 class="text-center pb-3">{{$blog->titulo }}</h1>
+    <h1 class="text-center pb-3">{{ $blog->titulo }}</h1>
 
     <div class="row">
         <div class="col-12">
@@ -22,7 +22,7 @@
                             <p class="card-text">{{ $blog->categoria }}</p>
                             <p class="card-text">{{$blog->texto}}</p>
                             <p class="card-text">
-                                <small class="text-muted">Last updated a few mins ago</small>
+                                <small class="text-muted">{{ $blog->created_at }}</small>
                             </p>
                         </div>
                     </div>

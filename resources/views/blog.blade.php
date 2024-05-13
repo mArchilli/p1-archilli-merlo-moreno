@@ -31,8 +31,8 @@
                             <div class="card-text my-2">
                                 <a href="{{ route('blog.view.post', ['id' => $posteo->id])}}" class="btnespecial btn-sm"><i class="fa fa-plus">Ver mas</i> </a>
                             </div>
-                            <p class="card-text">
-                                <small class="text-muted">Last updated a few mins ago</small>
+                            <p class="card-text d-flex justify-content-end">
+                            <small class="text-muted">{{ $posteo->created_at }}</small>
                             </p>
                         </div>
                     </div>
