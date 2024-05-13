@@ -41,84 +41,30 @@
     
 
 
-    <div id="cards_landscape_wrap-2" class="row mt-5">
-        <div class="container">
-            <h2 class="mosta p-1 text-center"> Entradas mas recientes</h2>
-            <div class="row d-flex flex-wrap container mx-auto px-4 pt-0">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="{{ route('blog') }}">
-                        <div class="card-flyer">
-                            <div class="text-box">
-                                <div class="image-box">
-                                    <img src="{{ asset('images/blog/card-potter.jpg') }}"
-                                        alt="Imagen promocional de harry potter" />
-                                </div>
-                                <div class="text-container">
-                                    <h6 class="mosta">Harry Potter - La Serie</h6>
-                                    <p>Con la emblemática varita de Harry Potter lista para encantar una vez más,
-                                        HBO Max se prepara para llevar a los espectadores a un viaje más allá...</p>
-                                </div>
+        <div id="cards_landscape_wrap-2" class="row mt-5">
+    <div class="container">
+        <h2 class="mosta p-1 text-center"> Entradas más recientes </h2>
+        <div class="row d-flex flex-wrap container mx-auto px-4 pt-0">
+            @foreach ($blog as $posteo)
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <a href="{{ route('blog') }}">
+                    <div class="card-flyer">
+                        <div class="text-box">
+                            <div class="image-box">
+                                <img class="img-fluid" src="{{ $posteo->imagen }}" alt="Imagen del libro: {{ $posteo->titulo }}">
+                            </div>
+                            <div class="text-container">
+                                <h6 class="mosta"> {{ Str::limit($posteo->titulo, 40) }} </h6>
+                                <p> {{ Str::limit($posteo->texto, 125) }} </p>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="{{ route('blog') }}">
-                        <div class="card-flyer">
-                            <div class="text-box">
-                                <div class="image-box">
-                                    <img src="{{ asset('images/blog/card-escritura.jpg') }}"
-                                        alt="ilustración de una pared de un escritor" />
-                                </div>
-                                <div class="text-container">
-                                    <h6 class="mosta">La buena escritura</h6>
-                                    <p>Con la tinta como su herramienta de creación, los escritores poseen un poder
-                                        extraordinario: el poder de cautivar, informar y transformar la
-                                        percepción...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="{{ route('blog') }}">
-                        <div class="card-flyer">
-                            <div class="text-box">
-                                <div class="image-box">
-                                    <img src="{{ asset('images/blog/card-got.jpg') }}"
-                                        alt="Rey de la noche vs John snow" />
-                                </div>
-
-                                <div class="text-container">
-                                    <h6 class="mosta">La próxima entrega de GOT</h6>
-                                    <p>George R. R. Martin ha confirmado que continúa sumido en la escritura del
-                                        próximo libro de la franquicia de Juego de Tronos. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="{{ route('blog') }}">
-                        <div class="card-flyer">
-                            <div class="text-box">
-                                <div class="image-box">
-                                    <img src="{{ asset('images/blog/card-dune.jpg') }}"
-                                        alt="Ilustración en el desierto - Dune" />
-                                </div>
-                                <div class="text-container">
-                                    <h6 class="mosta">Nueva Adaptación - DUNE</h6>
-                                    <p>En un universo donde la imaginación es rey, esta nueva adaptación
-                                        cinematográfica promete llevar a los espectadores a través de las dunas
-                                        ardientes..</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
+            @endforeach
         </div>
     </div>
+</div>
 
 
     <div class="row bglibros">
