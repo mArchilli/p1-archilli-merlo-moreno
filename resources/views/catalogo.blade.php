@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="backside bg-dark">
-                    <div class="card card-body text-center bg-dark text-white">
+                    <div class="card card-body text-center bg-dark text-white h-catalogo justify-content-evenly">
                             <h3 class="mosta p-3">{{ $lib->titulo }}</h3>
                             <p class="card-text p-3">{{ Str::limit($lib->descripcion, 150) }}</p>
                             <a href="{{ route('catalogo.view.book', ['id' => $lib->id]) }}" class="btnespecial btn-sm "><i class="fa fa-plus"> Más información</i> </a>
