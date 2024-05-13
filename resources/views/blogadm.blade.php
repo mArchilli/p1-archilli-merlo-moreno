@@ -1,4 +1,4 @@
-<x-layout>
+<x-layoutadmin>
 
     <x-slot:title>Panel Blog</x-slot:title>
 
@@ -50,4 +50,4 @@
     @endif
 
     
-</x-layout>
+</x-layoutadmin>

@@ -24,7 +24,7 @@ class AuthController extends Controller
         }
 
         return redirect()
-        ->route('blogadm')
+        ->route('admin')
         ->with('feedback.message', 'Inicio exitoso. ¡Hola de nuevo!');
     }
 

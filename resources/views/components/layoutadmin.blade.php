@@ -38,22 +38,13 @@
 
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ml-3">
                             <li class="nav-item">
-                                <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
-                                    href="{{ route('index') }}">Home</a>
-                            </li>
-                            <li class="nav-item">
 
                                 <a class="nav-link text-white px-lg-3 py-lg-2 " aria-current="page"
-                                    href="{{ route('catalogo') }}">Catálogo</a>
+                                    href="{{ route('libroadm') }}">Catálogo</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
-                                    href="{{ route('blog') }}">Blog</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
-                                    href="{{ route('about') }}">Sobre Nosotros</a>
+                                    href="{{ route('blogadm') }}">Blog</a>
                             </li>
 
                             @guest
