@@ -1,8 +1,6 @@
 <x-layout>
     <x-slot:title>Iniciar Sesión</x-slot:title>
 
-    <h1 class="mb-3">Ingresar a mi Cuenta</h1>
-
     <section class="text-center text-lg-start">
 
         <div class="container py-4">
@@ -10,7 +8,7 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="card cascading-right bg-body-tertiary" style="backdrop-filter: blur(30px);">
                         <div class="card-body p-5 shadow-5 text-center">
-                            <h2 class="fw-bold mb-5 mosta">Ingresá Ahora</h2>
+                            <h2 class="fw-bold mb-5 mosta">Ingresar a mi cuenta</h2>
                             <form action="{{ route('auth.login.process') }}" method="POST">
 
                                 @csrf
@@ -33,7 +31,7 @@
                 </div>
 
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="{{ asset('images/login/muchos-libros2.jpg') }}" class="w-100 rounded-4 shadow-4" alt="" />
+                    <img src="{{ asset('images/login/libros-login.jpg') }}" class="libroslogin rounded-4 shadow-4 d-none d-lg-block" alt="" />
                 </div>
             </div>
         </div>
