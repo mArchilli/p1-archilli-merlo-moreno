@@ -223,7 +223,7 @@
                         <li class="p-3 fw-bold">Resúmenes y capítulos iniciales</li>
                         <li class="p-3 fw-bold">Acceso al centro de ayuda e información</li>
                     </ul>
-                    <button type="button" class="btnespecial">Suscribete gratis</button>
+                    <a class="btnespecial" href="{{ route('auth.login.form') }}">Suscribíte</a>
                 </div>
             </div>
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow">
@@ -238,7 +238,7 @@
                         <li class="p-3 fw-bold">Descargas ilimitadas de todos nuestros libros</li>
                         <li class="p-3 fw-bold">Acceso exclusivo al blog de noticias y críticas</li>
                     </ul>
-                    <button type="button" class="btnespecial">Empieza ahora</button>
+                    <a class="btnespecial" href="{{ route('auth.login.form') }}">Empieza Ahora</a>
                 </div>
             </div>
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow ">
@@ -253,7 +253,7 @@
                         <li class="p-3 fw-bold"> Postea en nuestro blog exclusivo para miembros VIP</li>
                         <li class="p-3 fw-bold"> Acceso anticipado a lanzamientos</li>
                     </ul>
-                    <button type="button" class="btnespecial">Contáctanos</button>
+                    <a class="btnespecial" href="{{ route('about') }}">Contactanos</a>
                 </div>
             </div>
         </div>
