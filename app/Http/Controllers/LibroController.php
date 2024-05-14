@@ -119,9 +119,32 @@ class LibroController extends Controller
             'descripcion.required' => 'La descripcion debe ser ingresado'
         ]);
 
-        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion']);
+        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
 
         $libro = Libro::findOrFail($id);
+
+        
+        // Verifica si se cargó una nueva imagen
+        if ($request->hasFile('imagen')) {
+            // Elimina la imagen existente si hay una
+            if ($libro->imagen) {
+                // Eliminar la imagen del almacenamiento
+                $rutaImagenExistente = public_path($libro->imagen);
+                if (file_exists($rutaImagenExistente)) {
+                    unlink($rutaImagenExistente);
+                }
+            }
+
+            // Guarda la nueva imagen
+            $imagen = $request->file('imagen');
+            $ruta = 'images/libros/';
+            $nombreImagen = $imagen->getClientOriginalName();
+            $imagen->move(public_path($ruta), $nombreImagen);
+            $input['imagen'] = $ruta . $nombreImagen; // Aquí se guarda la ruta completa
+        } else {
+            // Si no se ha cargado una nueva imagen, mantener la imagen existente
+            $input['imagen'] = $libro->imagen;
+        }
 
         $libro->update($input);
 

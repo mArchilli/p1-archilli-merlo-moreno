@@ -6,7 +6,7 @@
     <div class="container my-2">
         <h1 class="mb-4 mosta">Editar libro</h1>
 
-        <form action="{{ route('libro.edit.process', ['id' => $libro->id]) }}" method="post">
+        <form action="{{ route('libro.edit.process', ['id' => $libro->id]) }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
 
