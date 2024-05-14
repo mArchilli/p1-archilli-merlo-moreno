@@ -12,10 +12,12 @@ class IndexController extends Controller
     {
         $blog = Blog::latest()->take(4)->get();
         $libro = Libro::all();
+        $librosRecomendados = Libro::whereIn('id', [14, 4, 17])->get();
 
         return view('index', [
             'blog' => $blog,
             'libro' => $libro,
+            'librosRecomendados' => $librosRecomendados
         ]);
     }
 
