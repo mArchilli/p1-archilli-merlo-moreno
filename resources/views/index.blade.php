@@ -15,7 +15,7 @@
     <div class="d-flex flex-md-row flex-column align-items-center flex-wrap justify-content-center ps-lg-5 gap-3">
         @foreach ($librosAleatorios as $lib)
             <div class="p-2">
-                <img class="imgbanner" src="{{ $lib->imagen }}" alt="Imagen del libro: {{ $lib->titulo }}">
+                <img class="imgbanner img-fluid" src="{{ $lib->imagen }}" alt="Imagen del libro: {{ $lib->titulo }}">
             </div>
         @endforeach
     </div>
@@ -74,9 +74,9 @@
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
                     <div class="row align-items-center">
                         <h2 class="mosta pt-5 pb-1 text-center"> Recomendaciones del mes</h2>
-                        <img class="col-5 imgtamano px-5 my-5 mx-auto" src="{{ asset($reco->imagen) }}"
+                        <img class="col-12 col-lg-5 imgtamano px-5 my-5 mx-auto" src="{{ asset($reco->imagen) }}"
                             alt="Imagen del libro: {{ $reco->titulo }}">
-                        <div class="col-6 d-flex flex-column">
+                        <div class="col-12 col-lg-6 text-center text-lg-start d-flex flex-column">
                             <h3 class="fs-2 pb-3 mosta">{{ $reco->titulo }}</h3>
                             <p class="fs-4 text-light">{{ $reco->autor }}</p>
                             <p class="text-light p-carrousel">{{ $reco->descripcion }}</p>
