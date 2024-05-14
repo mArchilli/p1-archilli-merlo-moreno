@@ -5,13 +5,13 @@
         <hr class="mb-3">
         <h2 class="mb-3">{{ $libro->titulo }}</h2>
         <h3 class="mb-3">{{ $libro->autor }}</h3>
-        <img src="{{$libro->imagen}}" alt="Imagen de {{$libro->titulo}}">
+        <img src="{{asset($libro->imagen)}}" alt="Imagen de {{$libro->titulo}}" class="pb-3 img-fluid">
         <form
             action="{{ route('libro.delete.process', ['id' => $libro->id]) }}"
             method="POST"
             class="ms-2"
         >
             @csrf
-            <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+            <button type="submit" class="btn btn-danger w-100">Confirmar Eliminación</button>
         </form>
 </x-layoutadmin>

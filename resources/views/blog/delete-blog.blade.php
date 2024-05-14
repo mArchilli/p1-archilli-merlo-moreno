@@ -5,13 +5,13 @@
         <hr class="mb-3">
         <h2 class="mb-3">{{ $blog->titulo }}</h2>
         <h3 class="mb-3">{{ $blog->subtitulo }}</h3>
-        <img src="{{$blog->imagen}}" alt="Imagen de {{$blog->titulo}}">
+        <img src="{{asset($blog->imagen)}}" alt="Imagen de {{$blog->titulo}}" class="pb-3 img-fluid">
         <form
             action="{{ route('blog.delete.process', ['id' => $blog->id]) }}"
             method="POST"
             class="ms-2"
         >
             @csrf
-            <button type="submit" class="btn btn-danger">Confirmar Eliminación</button>
+            <button type="submit" class="btn btn-danger w-100">Confirmar Eliminación</button>
         </form>
 </x-layoutadmin>
