@@ -64,6 +64,16 @@ class BlogController extends Controller
 
         $input = $request->only(['titulo', 'subtitulo', 'categoria', 'autor', 'texto', 'imagen']);
 
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $nombreImagen = $imagen->getClientOriginalName();
+            $ruta = 'images/blog/';
+            $imagen->move(public_path($ruta), $nombreImagen); // Mover el archivo a la ubicación deseada
+            
+            // Concatenar la ruta con el nombre de la imagen para almacenar en la base de datos
+            $input['imagen'] = $ruta . $nombreImagen;
+        }
+
         Blog::create($input);
 
         return redirect()
@@ -100,6 +110,28 @@ class BlogController extends Controller
         $input = $request->only(['titulo', 'subtitulo', 'categoria', 'autor', 'texto',]);
 
         $posteo = Blog::findOrFail($id);
+
+        // Verifica si se cargó una nueva imagen
+        if ($request->hasFile('imagen')) {
+            // Elimina la imagen existente si hay una
+            if ($posteo->imagen) {
+                // Eliminar la imagen del almacenamiento
+                $rutaImagenExistente = public_path($posteo->imagen);
+                if (file_exists($rutaImagenExistente)) {
+                    unlink($rutaImagenExistente);
+                }
+            }
+
+            // Guarda la nueva imagen
+            $imagen = $request->file('imagen');
+            $ruta = 'images/blog/';
+            $nombreImagen = $imagen->getClientOriginalName();
+            $imagen->move(public_path($ruta), $nombreImagen);
+            $input['imagen'] = $ruta . $nombreImagen; // Aquí se guarda la ruta completa
+        } else {
+            // Si no se ha cargado una nueva imagen, mantener la imagen existente
+            $input['imagen'] = $posteo->imagen;
+        }
 
         $posteo->update($input);
 

@@ -10,7 +10,7 @@
         <div class="alert alert-danger">Hay errores en los datos del formulario. Por favor, revisalos y volvé a intentar.</div>
     @endif
 
-    <form action="{{ route('blog.edit.process', ['id' => $blog->id]) }}" method="post">
+    <form action="{{ route('blog.edit.process', ['id' => $blog->id]) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
 
