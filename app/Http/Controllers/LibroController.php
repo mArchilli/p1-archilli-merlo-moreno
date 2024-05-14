@@ -70,6 +70,16 @@ class LibroController extends Controller
 
         $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
 
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $nombreImagen = $imagen->getClientOriginalName();
+            $ruta = 'images/libros/';
+            $imagen->move(public_path($ruta), $nombreImagen); // Mover el archivo a la ubicación deseada
+            
+            // Concatenar la ruta con el nombre de la imagen para almacenar en la base de datos
+            $input['imagen'] = $ruta . $nombreImagen;
+        }
+
         Libro::create($input);
 
         return redirect()
@@ -106,7 +116,7 @@ class LibroController extends Controller
             'isbn.min' => 'El ISBN se compone de minimo :min. caracteres',
             'isbn.max' => 'El ISBN se compone de maximo :max. caracteres',
             'descripcion.min' => 'La descripcion debe tener al menos :min caracteres.',
-            'descripcion.required' => 'La descripcion debe ser ingresado',
+            'descripcion.required' => 'La descripcion debe ser ingresado'
         ]);
 
         $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion']);

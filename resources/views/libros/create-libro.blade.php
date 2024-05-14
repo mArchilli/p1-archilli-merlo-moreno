@@ -10,7 +10,7 @@
         <div class="alert alert-danger">Hay errores en los datos del formulario. Por favor, revisalos y volvé a intentar.</div>
     @endif -->
 
-    <form action="" method="post">
+    <form action="{{ route('libro.create.process') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="row">
             <div class="col-12 col-md-6">
