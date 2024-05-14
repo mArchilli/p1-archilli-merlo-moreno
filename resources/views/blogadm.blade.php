@@ -34,9 +34,9 @@
                     <td>{{ $posteo->autor }}</td>
                     <td> {{ Str::limit($posteo->texto, 150) }}</td>
                     <td>
-                        <div class="d-flex">
-                            <a href="{{ route('blog.edit.form', ['id' => $posteo->id]) }}" class="ms-2 btn btn-secondary">Editar</a>
-                            <a href="{{ route('blog.delete.form', ['id' => $posteo->id]) }}" class="ms-2 btn btn-danger">Eliminar</a>
+                        <div class="d-flex flex-column">
+                            <a href="{{ route('blog.edit.form', ['id' => $posteo->id]) }}" class="my-3 btneditar text-center">Editar</a>
+                            <a href="{{ route('blog.delete.form', ['id' => $posteo->id]) }}" class="my-3 btneliminar">Eliminar</a>
                             
                         </div>
                     </td>

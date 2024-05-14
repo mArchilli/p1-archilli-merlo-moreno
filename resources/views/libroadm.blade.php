@@ -36,9 +36,9 @@
                     <td>{{ $libro->isbn }}</td>
                     <td>{{ Str::limit($libro->descripcion, 150) }}</td>
                     <td>
-                        <div class="d-flex">
-                            <a href="{{ route('libro.edit.form', ['id' => $libro->id]) }}" class="ms-2 btn btn-secondary">Editar</a>
-                            <a href="{{ route('libro.delete.form', ['id' => $libro->id]) }}" class="ms-2 btn btn-danger">Eliminar</a>
+                        <div class="d-flex flex-column">
+                            <a href="{{ route('libro.edit.form', ['id' => $libro->id]) }}" class="my-3 btneditar text-center">Editar</a>
+                            <a href="{{ route('libro.delete.form', ['id' => $libro->id]) }}" class="my-3 btneliminar">Eliminar</a>
                         </div>
                     </td>
                 </tr>

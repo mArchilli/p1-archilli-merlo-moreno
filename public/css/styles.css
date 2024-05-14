@@ -78,7 +78,7 @@ body {
     transform: scale(1.1);
 }
 
-.btnespecial {
+.btnespecial, .btneliminar, .btneditar{
     background-color: #ca8e5e;
     border-radius: 5px;
     border: none;
@@ -88,6 +88,23 @@ body {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
+.btneliminar {
+    background-color: #b91919;
+}
+
+.btneliminar:hover {
+    background-color: #711111;
+}
+
+.btneditar {
+    background-color: #017489;
+}
+
+.btneditar:hover {
+    background-color: #013a45;
+}
+
 
 .btnespecial:hover {
     background-color: #d8ae8b;

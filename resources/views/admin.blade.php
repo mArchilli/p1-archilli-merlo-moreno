@@ -2,8 +2,8 @@
 
     <x-slot:title>Administracion</x-slot:title>
 
-    <section class="py-5">
-	<div class="mt-5 container">
+    <section class="py-5 mt-5">
+	<div class="container">
 		<div class="row align-items-center gx-4">
 			
 			<div class="col-md-5 offset-md-1">
@@ -21,7 +21,7 @@
 	</div>
 </section>
 
-    <section class="py-5">
+    <section class="py-5 mb-5">
 	<div class="container">
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-md-8">
