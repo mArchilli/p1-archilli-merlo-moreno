@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $blog = Blog::all();
+        $blog = Blog::latest()->take(4)->get();
         $libro = Libro::all();
 
         return view('index', [
