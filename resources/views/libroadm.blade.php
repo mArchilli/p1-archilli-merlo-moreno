@@ -9,7 +9,8 @@
             <a class="btnespecial" href="{{ route('libro.create.form') }}">Cargar un nuevo libro</a>
         </div>
 
-        <table class="table table-striped table-bordered">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th class="bg-dark text-white">ID</th>
@@ -45,7 +46,10 @@
                 @endforeach
 
             </tbody>
-        </table>
+            </table>
+        </div>
+
+        
     @else
         <p>No hay libros que mostrar actualmente. Podés empezar por <a href="{{ route('libro.create.form') }}">cargar un libro</a>.</p>
     @endif
