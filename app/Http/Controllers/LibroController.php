@@ -44,11 +44,11 @@ class LibroController extends Controller
     public function createProcess(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|min:5',
+            'titulo' => 'required|min:4',
             'autor' => 'required|min:2',
             'editorial' => 'required|min:2',
             'anio_publicacion' => 'required|min:4|max:4',
-            'isbn' => 'required|min:10|max:13',
+            'isbn' => 'required|min:10|max:14',
             'descripcion' => 'required|min:5',
             'imagen'=> 'required'
         ], [
@@ -63,6 +63,7 @@ class LibroController extends Controller
             'anio_publicacion.max' => 'El año de publicacion se compone de maximo :max. caracteres',
             'isbn.min' => 'El ISBN se compone de minimo :min. caracteres',
             'isbn.max' => 'El ISBN se compone de maximo :max. caracteres',
+            'isbn.required' => 'El ISBN debe ser ingresado',
             'descripcion.min' => 'La descripcion debe tener al menos :min caracteres.',
             'descripcion.required' => 'La descripcion debe ser ingresado',
             'imagen.required'=>'La imagen debe ser cargada'
@@ -97,11 +98,11 @@ class LibroController extends Controller
     public function editProcess(int $id, Request $request)
     {
         $request->validate([
-            'titulo' => 'required|min:5',
+            'titulo' => 'required|min:4',
             'autor' => 'required|min:2',
             'editorial' => 'required|min:2',
             'anio_publicacion' => 'required|min:4|max:4',
-            'isbn' => 'required|min:10|max:13',
+            'isbn' => 'required|min:10|max:14',
             'descripcion' => 'required|min:5',
         ], [
             'titulo.min' => 'El título debe tener al menos :min caracteres.',
@@ -115,6 +116,7 @@ class LibroController extends Controller
             'anio_publicacion.max' => 'El año de publicacion se compone de maximo :max. caracteres',
             'isbn.min' => 'El ISBN se compone de minimo :min. caracteres',
             'isbn.max' => 'El ISBN se compone de maximo :max. caracteres',
+            'isbn.required' => 'El ISBN debe ser ingresado',
             'descripcion.min' => 'La descripcion debe tener al menos :min caracteres.',
             'descripcion.required' => 'La descripcion debe ser ingresado'
         ]);

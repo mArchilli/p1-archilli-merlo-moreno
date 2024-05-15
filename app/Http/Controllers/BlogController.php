@@ -59,6 +59,7 @@ class BlogController extends Controller
             'autor.min' => 'El autor debe tener al menos :min caracteres.',
             'autor.required' => 'El autor debe ser ingresado',
             'texto.min' => 'La publicacion debe contener al menos :min caracteres.',
+            'texto.required' => 'La publicacion debe ser completada',
             'imagen.required'=>'La imagen debe ser cargada'
         ]);
 
@@ -105,6 +106,7 @@ class BlogController extends Controller
             'autor.min' => 'El autor debe tener al menos :min caracteres.',
             'autor.required' => 'El autor debe ser ingresado',
             'texto.min' => 'La publicacion debe contener al menos :min caracteres.',
+            'texto.required' => 'La publicacion debe ser completada',
         ]);
 
         $input = $request->only(['titulo', 'subtitulo', 'categoria', 'autor', 'texto',]);
