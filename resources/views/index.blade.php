@@ -5,7 +5,8 @@
 <x-layout>
     <x-slot:title>Home</x-slot:title>
 
-    
+    <h1 class="d-none">Libralink</h1>
+
         <div class="row py-lg-5 p-0">
             <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center py-5 py-lg-0">
                 <h2 class="fs-1 font-fantasy pl-5 pr-4 ps-lg-5">Un mundo de fantasía a un <span class="mostaza">click</span> de
@@ -29,17 +30,11 @@
                 <h2 class="pb-4 mosta fs-1">LibraLink</h2>
                 <p class="fs-5">Sumérgete en Libralink, donde cada libro es un portal a mundos
                     inexplorados. Descubre océanos misteriosos, ciudades flotantes y emociones puras. Cada página te
-                    transporta
-                    a una nueva aventura, haciendo de la lectura una experiencia viva. Descubre, vive y transforma tu
-                    percepción
-                    del universo con cada historia.
+                    transporta a una nueva aventura, haciendo de la lectura una experiencia viva. Descubre, vive y 
+                    transforma tu percepción del universo con cada historia.
                 </p>
             </div>
         </div>
-
-
-    
-
 
         <div id="cards_landscape_wrap-2" class="row mt-5">
     <div class="container">
@@ -54,7 +49,7 @@
                                 <img class="img-fluid" src="{{ $posteo->imagen }}" alt="Imagen del libro: {{ $posteo->titulo }}">
                             </div>
                             <div class="text-container">
-                                <h6 class="mosta"> {{ Str::limit($posteo->titulo, 40) }} </h6>
+                                <h3 class="fs-5 mosta"> {{ Str::limit($posteo->titulo, 40) }} </h3>
                                 <p> {{ Str::limit($posteo->texto, 125) }} </p>
                             </div>
                         </div>
@@ -100,17 +95,17 @@
 
 
     <div class="pricing-header pt-5 mx-auto text-center">
-        <h1 class="display-4 p-4 mostaza">Elegí tu suscripción</h1>
+        <h2 class="display-4 p-4 mostaza">Elegí tu suscripción</h2>
     </div>
 
     <div class="container">
         <div class="row card-deck mb-3 text-center d-flex justify-content-center gap-5 px-4 py-5">
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 fs-3 font-weight-normal mosta">Gratis</h4>
+                    <h3 class="my-0 fs-3 font-weight-normal mosta">Gratis</h3>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mes</small></h1>
+                    <p class="card-title pricing-card-title">$0 <small class="text-muted">/ mes</small></p>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li class="p-3 fw-bold">Lectura online</li>
                         <li class="p-3 fw-bold">Acceso a 50 libros rotativos por mes</li>
@@ -122,10 +117,10 @@
             </div>
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 fs-3 font-weight-normal mosta">Pro</h4>
+                    <h3 class="my-0 fs-3 font-weight-normal mosta">Pro</h3>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$9 <small class="text-muted">/ mes</small></h1>
+                    <p class="card-title pricing-card-title">$9 <small class="text-muted">/ mes</small></p>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li class="p-3 fw-bold">Sin anuncios</li>
                         <li class="p-3 fw-bold">Acceso ilimitado a 10,000+ libros</li>
@@ -137,10 +132,10 @@
             </div>
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow ">
                 <div class="card-header">
-                    <h4 class="my-0 fs-3 font-weight-normal mosta">Premium</h4>
+                    <h3 class="my-0 fs-3 font-weight-normal mosta">Premium</h3>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$18 <small class="text-muted">/ mes</small></h1>
+                    <p class="card-title pricing-card-title">$18 <small class="text-muted">/ mes</small></p>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li class="p-3 fw-bold"> Beneficios Pro incluidos</li>
                         <li class="p-3 fw-bold"> Publicá tus propios libros en la plataforma</li>

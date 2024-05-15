@@ -1,15 +1,15 @@
 <x-layout>
 
-    <x-slot:title>Libro {{$libro->titulo }}</x-slot:title>
+    <x-slot:title>Libro {{ $libro->titulo }}</x-slot:title>
 
-    <h1 class="text-center pt-2 pb-4 mosta"> {{$libro->titulo }}</h1>
+    <h1 class="text-center pt-2 pb-4 mosta"> {{ $libro->titulo }}</h1>
 
     <div class="row">
         <div class="col-12">
             <div class="card mb-3 bg-dark">
                 <div class="row g-0 flex-row">
                     <div class="col-12 col-xl-4">
-                        <img class="img-fluid" src="{{asset($libro->imagen)}}" alt="Imagen de {{ $libro->titulo }}">
+                        <img class="img-fluid" src="{{ asset($libro->imagen) }}" alt="Imagen de {{ $libro->titulo }}">
                     </div>
                     <div class="col-12 col-xl-8">
                         <div class="card-body text-white">

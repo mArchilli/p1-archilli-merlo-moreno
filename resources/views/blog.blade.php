@@ -14,6 +14,7 @@
         <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
     </div>
     @endauth
+
     <div class="row ">
         @foreach ($blog as $posteo)
         <div class="col-12 col-md-6">
@@ -24,7 +25,7 @@
                     </div>
                     <div class="col-12">
                         <div class="card-body bg-dark text-white">
-                            <h5 class="mosta fs-4">{{ $posteo->titulo }}</h5>
+                            <h2 class="mosta fs-4">{{ $posteo->titulo }}</h2>
                             <p class="card-text">{{ $posteo->subtitulo }}</p>
                             <p class="card-text">{{ $posteo->categoria }}</p>
                             <p class="card-text">{{ Str::limit($posteo->texto, 150) }}</p>
@@ -41,7 +42,4 @@
         </div>
         @endforeach
     </div>
-
-
-    <!-- otra opción: https://codepen.io/cristinaconacel/pen/dgmjKK -->
 </x-layout>

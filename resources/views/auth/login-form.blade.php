@@ -1,8 +1,10 @@
 <x-layout>
     <x-slot:title>Iniciar Sesión</x-slot:title>
 
-    <section class="text-center text-lg-start">
 
+    <h1 class="d-none">Inicio de Sesión</h1>
+
+    <section class="text-center text-lg-start">
         <div class="container py-4">
             <div class="row g-0 align-items-center justify-content-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
@@ -31,7 +33,7 @@
                 </div>
 
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="{{ asset('images/login/libros-login.jpg') }}" class="libroslogin rounded-4 shadow-4 d-none d-lg-block" alt="" />
+                    <img src="{{ asset('images/login/libros-login.jpg') }}" class="libroslogin rounded-4 shadow-4 d-none d-lg-block" alt="Imagen de libros en blanco y negro" />
                 </div>
             </div>
         </div>

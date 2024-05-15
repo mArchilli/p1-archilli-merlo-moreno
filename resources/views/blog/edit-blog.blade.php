@@ -15,13 +15,13 @@
         <div class="row">
 
         <div class="col-12 col-md-6 mb-3 ">
-                <img src="{{ asset($blog->imagen) }}" alt="Imagen de {{$blog->titulo}}" class="img-fluid">
+                <img src="{{ asset($blog->imagen) }}" alt="Imagen de {{ $blog->titulo }}" class="img-fluid">
             </div> 
 
             <div class="col-12 col-md-6">
                 <div class="mb-3">
                     <label for="titulo" class="form-label fw-bold">Título</label>
-                    <input type="text" id="titulo" name="titulo" class="form-control" value="{{$blog->titulo}}">
+                    <input type="text" id="titulo" name="titulo" class="form-control" value="{{ $blog->titulo }}">
                     @error('titulo')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
@@ -29,7 +29,7 @@
 
                 <div class="mb-3">
                     <label for="subtitulo" class="form-label fw-bold">Subtítulo</label>
-                    <input type="text" id="subtitulo" name="subtitulo" class="form-control" value="{{$blog->subtitulo}}"">
+                    <input type="text" id="subtitulo" name="subtitulo" class="form-control" value="{{ $blog->subtitulo }}"">
                     @error('subtitulo')
                         <div class="text-danger">{{ $message }}</div>
                     @enderror
@@ -38,7 +38,7 @@
                 <div class="mb-3">
                     <label for="categoria" class="form-label fw-bold">Categoría</label>
                     <select id="categoria" name="categoria" class="form-select">
-                        <option value="{{$blog->categoria}}" selected>{{$blog->categoria}}</option>
+                        <option value="{{ $blog->categoria }}" selected>{{ $blog->categoria }}</option>
                         <option value="Entretenimiento">Entretenimiento</option>
                         <option value="Literatura">Literatura</option>
                         <option value="Cine">Cine</option>
@@ -75,7 +75,7 @@
             </div>  
         </div>
         
-        <button type="submit" class="btnespecial w-100 py-2">Actualizar</button>
+        <button type="submit" class="btneditar w-100 py-2">Actualizar</button>
     </form>
 
     </div>
