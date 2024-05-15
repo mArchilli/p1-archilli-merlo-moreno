@@ -1,6 +1,14 @@
 <x-layoutadmin>
     <x-slot:title>Eliminar post</x-slot:title>
-        <h1 class="my-3 text-danger text-center">¿Estás seguro que deseas eliminar?</h1>
+        <div class="row justify-content-center align-items-center my-2">
+                <div class="col-2 text-center">
+                    <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
+                </div>
+                <div class="col-10">
+                    <h1 class="text-danger text-center">¿Estás seguro que deseas eliminar?</h1>
+                </div>
+        </div>
+        
         <p class="my-5 fs-5 text-center fw-bold">Estás por eliminar el siguiente post, y es necesario una confirmación.</p>
 
         <div class="row">

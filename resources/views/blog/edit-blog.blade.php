@@ -4,7 +4,15 @@
     <x-slot:title>Editar Posteo</x-slot:title>
 
     <div class="container my-2">
-    <h1 class="mb-4 mosta">Editar blog</h1>
+    <div class="row justify-content-center align-items-center my-2">
+                <div class="col-2 text-center">
+                    <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
+                </div>
+                <div class="col-10">
+                    <h1 class="mosta">Editar blog</h1>
+                </div>
+        </div>
+    
 
     @if($errors->any())
         <div class="alert alert-danger">Hay errores en los datos del formulario. Por favor, revisalos y volvé a intentar.</div>

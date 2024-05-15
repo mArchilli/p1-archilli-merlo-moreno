@@ -2,10 +2,14 @@
 
     <x-slot:title>Panel Blog</x-slot:title>
 
-    <h1 class="mosta mt-3">Panel de Administracion de Blog</h1>
+    <div class="row align-items-center">
+        <div class="col-10">
+            <h1 class="mosta">Panel de Administracion de Blog</h1>
+        </div>
+    </div>
     
     @if($blogadm->isNotEmpty())
-        <div class="my-3 d-flex justify-content-end">
+        <div class=" d-flex justify-content-end">
             <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
         </div>
 

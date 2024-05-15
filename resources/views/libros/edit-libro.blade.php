@@ -5,7 +5,15 @@
     <x-slot:title>Editar Libro</x-slot:title>
 
     <div class="container my-2">
-        <h1 class="mb-4 mosta">Editar libro</h1>
+        <div class="row justify-content-center align-items-center my-2">
+                <div class="col-2 text-center">
+                    <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
+                </div>
+                <div class="col-10">
+                    <h1 class="mb-4 mosta">Editar libro</h1>
+                </div>
+        </div>
+        
 
         <form action="{{ route('libro.edit.process', ['id' => $libro->id]) }}" method="post" enctype="multipart/form-data">
             @csrf

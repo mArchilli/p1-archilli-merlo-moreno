@@ -2,7 +2,12 @@
 
     <x-slot:title>Panel libros</x-slot:title>
 
-    <h1 class="mosta">Panel de Administracion de libros</h1>
+    <div class="row align-items-center">
+        <div class="col-10">
+            <h1 class="mosta">Panel de Administracion de libros</h1>
+        </div>
+    </div>
+
 
     @if($libroadm->isNotEmpty())
         <div class="mb-4 d-flex justify-content-end">

@@ -4,11 +4,16 @@
     <x-slot:title>Nuevo Post</x-slot:title>
 
     <div class="container my-2">
-    <h1 class="mb-4 mosta">Publicar un Post</h1>
+    
 
-    <!-- @if($errors->any())
-        <div class="alert alert-danger">Hay errores en los datos del formulario. Por favor, revisalos y volvé a intentar.</div>
-    @endif -->
+    <div class="row justify-content-center align-items-center my-2">
+            <div class="col-2 text-center">
+                <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
+            </div>
+            <div class="col-10">
+                <h1 class="mosta">Publicar un Post</h1>
+            </div>
+    </div>
 
     <form action="{{ route('blog.create.process') }}" method="post" enctype="multipart/form-data">
         @csrf
