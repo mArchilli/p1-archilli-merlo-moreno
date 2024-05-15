@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ $title }} :: DV Libros</title>
+    <title>{{ $title }} | Libralink</title>
 
     {{-- FONTS --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

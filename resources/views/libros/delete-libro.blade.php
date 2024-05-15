@@ -1,17 +1,21 @@
 <x-layoutadmin>
     <x-slot:title>Eliminar libro</x-slot:title>
-        <h1 class="mb-3">Confirmación para Eliminar "{{ $libro->titulo }}"</h1>
-        <p class="mb-3">Estás por eliminar el siguiente libro, y es necesario una confirmación.</p>
-        <hr class="mb-3">
-        <h2 class="mb-3">{{ $libro->titulo }}</h2>
-        <p class="mb-3">{{ $libro->autor }}</p>
-        <img src="{{ asset($libro->imagen) }}" alt="Imagen de {{ $libro->titulo }}" class="pb-3 img-fluid">
+    <h1 class="my-3 text-danger text-center">¿Estás seguro que deseas eliminar?</h1>
+    <p class="my-5 fs-5 text-center fw-bold">Estás por eliminar el siguiente libro, y es necesario una confirmación.</p>
+
+    <div class="row">
+    <img src="{{ asset($libro->imagen) }}" alt="Imagen de {{ $libro->titulo }}" class="col-12 col-md-4 pb-3 img-fluid">    
+    <div class="col-12 col-md-8 px-2 pt-5">
+        <h2 class="my-3 mosta">{{ $libro->titulo }}</h2>
+        <p class="mb-3 fw-bold">{{ $libro->autor }}</p>
+        <p class="mb-3">{{ $libro->descripcion }}</p>
+        </div>
         <form
             action="{{ route('libro.delete.process', ['id' => $libro->id]) }}"
             method="POST"
-            class="ms-2"
-        >
+            class="ms-2">
+            </div>
             @csrf
-            <button type="submit" class="btneliminar w-100">Confirmar Eliminación</button>
+            <button type="submit" class="my-4 btneliminar w-100">Confirmar Eliminación</button>
         </form>
 </x-layoutadmin>
