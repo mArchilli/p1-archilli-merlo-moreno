@@ -80,19 +80,18 @@
             </nav>
         </div>
 
-        <main class="">
+        <main>
+            <div class="container pt-5">
+                @if(session()->has('feedback.message'))
 
-            <div class="container  pt-5">
-            @if(session()->has('feedback.message'))
-
-            <div class=" d-flex justify-content-between fade show alert alert-{{ session()->get('feedback.type', 'success') }}">{!!
-                session()->get('feedback.message') !!}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            @endif
+                <div class=" d-flex justify-content-between fade show alert alert-{{ session()->get('feedback.type', 'success') }}">{!!
+                    session()->get('feedback.message') !!}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                @endif
 
 
-            {{ $slot }}
+                {{ $slot }}
 
             </div>
         </main>

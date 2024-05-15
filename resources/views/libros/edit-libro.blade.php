@@ -3,14 +3,12 @@
 ?>
 <x-layoutadmin>
     <x-slot:title>Editar Libro</x-slot:title>
-
-    <div class="container my-2">
         <div class="row justify-content-center align-items-center my-2">
-                <div class="col-2 text-center">
+                <div class="col-1 text-center">
                     <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
                 </div>
-                <div class="col-10">
-                    <h1 class="mb-4 mosta">Editar libro</h1>
+                <div class="col-11">
+                    <h1 class="mosta px-2">Editar libro</h1>
                 </div>
         </div>
         
@@ -88,6 +86,5 @@
             <button type="submit" class="btneditar w-100 py-2">Actualizar</button>
         </form>
 
-    </div>
 
 </x-layoutadmin>

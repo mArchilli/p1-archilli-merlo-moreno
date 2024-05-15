@@ -3,13 +3,12 @@
 <x-layoutadmin>
     <x-slot:title>Nuevo Post</x-slot:title>
 
-    <div class="container mb-2">
         <div class="row justify-content-center align-items-center my-2">
-            <div class="col-2 text-center">
+            <div class="col-1 text-center">
                 <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
             </div>
-            <div class="col-10">
-                <h1 class="mosta">Cargar libro</h1>
+            <div class="col-11">
+                <h1 class="mosta px-2">Cargar libro</h1>
             </div>
         </div>
 
@@ -88,7 +87,6 @@
         <button type="submit" class="btnespecial w-100 py-2">Publicar</button>
     </form>
 
-    </div>
 
     
 </x-layoutadmin>
