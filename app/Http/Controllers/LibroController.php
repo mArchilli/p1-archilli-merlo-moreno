@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Editorial;
 use Illuminate\Http\Request;
 use App\Models\Libro;
 
@@ -9,7 +10,8 @@ class LibroController extends Controller
 {
     public function catalogo()
     {
-        $libro = Libro::all();
+        //Indicamos las relaciones que deben cargarse
+        $libro = Libro::with('editorial')->get();
         return view('catalogo', [
             'libro' => $libro,
         ]);
@@ -17,7 +19,8 @@ class LibroController extends Controller
 
     public function libroadm()
     {
-        $libroadm = Libro::all();
+        //Indicamos las relaciones que deben cargarse
+        $libroadm = Libro::with('editorial')->get();
         return view('libroadm', [
             'libroadm' => $libroadm,
         ]);
@@ -38,7 +41,9 @@ class LibroController extends Controller
     }
 
     public function createForm(){
-        return view('libros.create-libro');
+        return view('libros.create-libro', [
+            'editorials' => Editorial::all(),
+        ]);
     }
 
     public function createProcess(Request $request)
@@ -46,7 +51,7 @@ class LibroController extends Controller
         $request->validate([
             'titulo' => 'required|min:4',
             'autor' => 'required|min:2',
-            'editorial' => 'required|min:2',
+            'editorial_fk' => 'required',
             'anio_publicacion' => 'required|min:4|max:4',
             'isbn' => 'required|min:10|max:14',
             'descripcion' => 'required|min:5',
@@ -56,8 +61,7 @@ class LibroController extends Controller
             'titulo.required' => 'El titulo debe ser ingresado',
             'autor.min' => 'El autor debe tener al menos :min caracteres.',
             'autor.required' => 'El autor debe ser ingresado',
-            'editorial.min' => 'El editorial debe tener al menos :min caracteres.',
-            'editorial.required' => 'El editorial debe ser ingresado',
+            'editorial_fk.required' => 'El editorial debe ser ingresado',
             'anio_publicacion.required' => 'El año de publicacion debe ser ingresado',
             'anio_publicacion.min' => 'El año de publicacion se compone de minimo :min. caracteres',
             'anio_publicacion.max' => 'El año de publicacion se compone de maximo :max. caracteres',
@@ -69,7 +73,7 @@ class LibroController extends Controller
             'imagen.required'=>'La imagen debe ser cargada'
         ]);
 
-        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
+        $input = $request->only(['titulo', 'autor', 'editorial_fk', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
 
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
@@ -92,6 +96,7 @@ class LibroController extends Controller
     {
         return view('libros.edit-libro', [
             'libro' => Libro::findOrFail($id),
+            'editorials' => Editorial::all(),
         ]);
     }
 
@@ -100,7 +105,7 @@ class LibroController extends Controller
         $request->validate([
             'titulo' => 'required|min:4',
             'autor' => 'required|min:2',
-            'editorial' => 'required|min:2',
+            'editorial_fk' => 'required',
             'anio_publicacion' => 'required|min:4|max:4',
             'isbn' => 'required|min:10|max:14',
             'descripcion' => 'required|min:5',
@@ -109,8 +114,7 @@ class LibroController extends Controller
             'titulo.required' => 'El titulo debe ser ingresado',
             'autor.min' => 'El autor debe tener al menos :min caracteres.',
             'autor.required' => 'El autor debe ser ingresado',
-            'editorial.min' => 'El editorial debe tener al menos :min caracteres.',
-            'editorial.required' => 'El editorial debe ser ingresado',
+            'editorial_fk.required' => 'El editorial debe ser ingresado',
             'anio_publicacion.required' => 'El año de publicacion debe ser ingresado',
             'anio_publicacion.min' => 'El año de publicacion se compone de minimo :min. caracteres',
             'anio_publicacion.max' => 'El año de publicacion se compone de maximo :max. caracteres',
@@ -121,7 +125,7 @@ class LibroController extends Controller
             'descripcion.required' => 'La descripcion debe ser ingresado'
         ]);
 
-        $input = $request->only(['titulo', 'autor', 'editorial', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
+        $input = $request->only(['titulo', 'autor', 'editorial_fk', 'anio_publicacion', 'isbn', 'descripcion', 'imagen']);
 
         $libro = Libro::findOrFail($id);
 

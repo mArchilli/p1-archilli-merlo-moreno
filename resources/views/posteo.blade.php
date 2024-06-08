@@ -22,7 +22,7 @@
                             <p class="card-text">{{ $blog->categoria }}</p>
                             <p class="card-text">{{$blog->texto}}</p>
                             <p class="card-text">
-                                <small class="d-flex justify-content-end py-2">{{ $blog->created_at }}</small>
+                                <small class="d-flex justify-content-end py-2">{{ $blog->obtenerFechaFormateada() }}</small>
                             </p>
                         </div>
                     </div>

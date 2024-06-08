@@ -23,7 +23,7 @@
                             <img class="img-fluid" src="{{ $lib->imagen }}" alt="Imagen del libro">
                             <h2 class="mosta fs-4 pt-3 my-0">{{ $lib->titulo }}</h2>
                             <p class="card-text my-0 py-0">{{ $lib->autor }}</p>
-                            <p class="card-text my-0 py-0">{{ $lib->editorial }}</p>
+                            <p class="card-text my-0 py-0">{{ $lib->editorial->nombre }}</p>
                             <p class="card-text my-0 py-0">{{ $lib->anio_publicacion }}</p>
                         </div>
                     </div>

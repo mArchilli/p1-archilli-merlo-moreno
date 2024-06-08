@@ -2,7 +2,9 @@
 /** @var \App\Models\Blog[]|\Illuminate\Database\Eloquent\Collection $blogs */
 ?>
 
+
 <x-layout>
+    
 
     <x-slot:title>Blog</x-slot:title>
 
@@ -33,7 +35,7 @@
                                 <a href="{{ route('blog.view.post', ['id' => $posteo->id])}}" class="btnespecial btn-sm"><i class="fa fa-plus">Ver mas</i> </a>
                             </div>
                             <p class="card-text d-flex justify-content-end">
-                            <small class="text-white">{{ $posteo->created_at }}</small>
+                            <small class="text-white">{{ $posteo->obtenerFechaFormateada() }}</small>
                             </p>
                         </div>
                     </div>

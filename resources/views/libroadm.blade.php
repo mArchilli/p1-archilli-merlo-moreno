@@ -37,7 +37,7 @@
                     <td><img class="w-100" src="{{ $libro->imagen }}" alt="Imagen del posteo"></td>
                     <td>{{ $libro->titulo }}</td>
                     <td>{{ $libro->autor }}</td>
-                    <td>{{ $libro->editorial }}</td>
+                    <td>{{ $libro->editorial->nombre }}</td>
                     <td>{{ $libro->anio_publicacion }}</td>
                     <td>{{ $libro->isbn }}</td>
                     <td>{{ Str::limit($libro->descripcion, 150) }}</td>

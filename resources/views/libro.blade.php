@@ -15,7 +15,7 @@
                         <div class="card-body text-white">
                             <h2 class="card-title p-3">{{ $libro->titulo }}</h2>
                             <p class="card-text p-2"><strong class="mosta">Autor:</strong> {{ $libro->autor }}</p>
-                            <p class="card-text p-2"><strong class="mosta">Editorial:</strong> {{ $libro->editorial }}</p>
+                            <p class="card-text p-2"><strong class="mosta">Editorial:</strong> {{ $libro->editorial->nombre }}</p>
                             <p class="card-text p-2"><strong class="mosta">Año de publicacion:</strong> {{ $libro->anio_publicacion }}</p>
                             <p class="card-text p-2"><strong class="mosta">ISBN:</strong> {{ $libro->isbn }}</p>
                             <p class="card-text p-2"><strong class="mosta">Sinopsis:</strong> {{$libro->descripcion}}</p>

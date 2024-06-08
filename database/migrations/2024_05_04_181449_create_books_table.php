@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('titulo');
             $table->string('autor');
-            $table->string('editorial')->nullable();
             $table->unsignedSmallInteger('anio_publicacion');
             $table->string('isbn')->unique();
             $table->text('descripcion')->nullable();

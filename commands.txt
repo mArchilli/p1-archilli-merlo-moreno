@@ -21,3 +21,9 @@ php artisan db:seed --class=Nombredelseed
 
 #crear modelo
 php artisan make:model
+
+#Volver a ejecutar las Migraciones
+php artisan migrate:refresh
+
+#Borrar tablas y volver a ejecutar las Migraciones
+php artisan migrate:fresh

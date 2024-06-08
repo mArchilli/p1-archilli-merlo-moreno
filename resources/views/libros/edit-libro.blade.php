@@ -39,9 +39,24 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="editorial" class="form-label fw-bold">Editorial</label>
-                        <input type="text" id="editorial" name="editorial" class="form-control" value="{{ $libro->editorial }}">
-                        @error('editorial')
+                        <label for="editorial_fk" class="form-label">Editorial</label>
+                        <select
+                            id="editorial_fk"
+                            name="editorial_fk"
+                            class="form-control"
+                        >
+
+                            @foreach($editorials as $editorial)
+                            <option
+                                value="{{ $editorial->editorial_id }}"
+                                @selected($editorial->editorial_id == old('editorial_fk'))
+                                @selected($editorial->editorial_id == old('editorial_fk', $libro->editorial_fk))
+                            >
+                                {{ $editorial->nombre }}
+                            </option>
+                            @endforeach
+                        </select>
+                        @error('editorial_fk')
                             <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
