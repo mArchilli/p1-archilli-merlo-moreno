@@ -88,6 +88,22 @@
                 </div>
             </div>
 
+            <fieldset class="mb-3">
+                <legend>Géneros</legend>
+
+                @foreach($generos as $genero)
+                <label class="me-2">
+                    <input
+                        type="checkbox"
+                        name="genero_fks[]"
+                        value="{{ $genero->genero_id }}"
+                        @checked( in_array($genero->genero_id, old('genero_fks', [])) )
+                    >
+                    {{ $genero->nombre }}
+                </label>
+                @endforeach
+            </fieldset>
+
             <div class="col-12 mb-3">
                 <label for="texto" class="form-label fw-bold">Descripcion</label>
                 <textarea id="descripcion" name="descripcion" class="form-control" rows="5">{{ old('descripcion') }}</textarea>

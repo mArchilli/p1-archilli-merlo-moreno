@@ -16,6 +16,11 @@
     <div class="col-12 col-md-8 px-2 pt-5">
         <h2 class="my-3 mosta">{{ $libro->titulo }}</h2>
         <p class="mb-3 fw-bold">{{ $libro->autor }}</p>
+        @forelse($libro->generos as $genero)
+            <span class="badge bg-secondary card-text mb-2">{{ $genero->nombre }}</span>
+            @empty
+                <i>Sin géneros</i>
+        @endforelse
         <p class="mb-3">{{ $libro->descripcion }}</p>
         </div>
         <form

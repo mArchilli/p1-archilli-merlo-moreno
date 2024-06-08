@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Editorial;
+use App\Models\Genero;
 use Illuminate\Http\Request;
 use App\Models\Libro;
 
@@ -11,7 +12,7 @@ class LibroController extends Controller
     public function catalogo()
     {
         //Indicamos las relaciones que deben cargarse
-        $libro = Libro::with('editorial')->get();
+        $libro = Libro::with(['editorial', 'generos'])->get();
         return view('catalogo', [
             'libro' => $libro,
         ]);
@@ -20,7 +21,7 @@ class LibroController extends Controller
     public function libroadm()
     {
         //Indicamos las relaciones que deben cargarse
-        $libroadm = Libro::with('editorial')->get();
+        $libroadm = Libro::with(['editorial', 'generos'])->get();
         return view('libroadm', [
             'libroadm' => $libroadm,
         ]);
@@ -42,7 +43,8 @@ class LibroController extends Controller
 
     public function createForm(){
         return view('libros.create-libro', [
-            'editorials' => Editorial::all(),
+            'editorials' => Editorial::orderBy('nombre')->get(),
+            'generos' => Genero::orderBy('nombre')->get(),
         ]);
     }
 
@@ -85,7 +87,10 @@ class LibroController extends Controller
             $input['imagen'] = $ruta . $nombreImagen;
         }
 
-        Libro::create($input);
+        $libro = Libro::create($input);
+
+
+        $libro->generos()->attach( $request->input('genero_fks', []) );
 
         return redirect()
             ->route('libroadm')
@@ -96,7 +101,8 @@ class LibroController extends Controller
     {
         return view('libros.edit-libro', [
             'libro' => Libro::findOrFail($id),
-            'editorials' => Editorial::all(),
+            'editorials' => Editorial::orderBy('nombre')->get(),
+            'generos' => Genero::orderBy('nombre')->get(),
         ]);
     }
 
@@ -154,6 +160,8 @@ class LibroController extends Controller
 
         $libro->update($input);
 
+        $libro->generos()->sync( $request->input('genero_fks', []) );
+
         return redirect()
             ->route('libroadm')
             ->with('feedback.message', 'El libro <b>"' . e($input['titulo']) . '"</b> se editó con éxito.');
@@ -170,11 +178,16 @@ class LibroController extends Controller
     {
         $libro = Libro::findOrFail($id);
 
+        $tituloEliminado = $libro->titulo;
+
+        //Borramos todos los registros relacionados con la tabla pivot libros_have_generos de la relacion con generos.
+        $libro->generos()->detach();
+
         $libro->delete();
 
         return redirect()
             ->route('libroadm')
-            ->with('feedback.message', 'El libro <b>"' . e($libro->title) . '"</b> se eliminó con éxito.');
+            ->with('feedback.message', 'El libro <b>"' . e($tituloEliminado) . '"</b> se eliminó con éxito.');
     }
 
 }

@@ -44,7 +44,6 @@
                         <option value="Literatura">Literatura</option>
                         <option value="Cine">Cine</option>
                         <option value="Educación">Educación</option>
-                        <!-- Agrega más opciones según tus necesidades -->
                     </select>
                     @error('categoria')
                         <div class="text-danger">{{ $message }}</div>

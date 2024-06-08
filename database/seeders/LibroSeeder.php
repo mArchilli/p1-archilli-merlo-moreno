@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Libro;
+use Illuminate\Support\Facades\DB;
 
 class LibroSeeder extends Seeder
 {
@@ -202,5 +203,176 @@ class LibroSeeder extends Seeder
             Libro::create($libroData);
         }
 
+        DB::table('libros_have_generos')->insert([
+            [
+                'libro_fk' => 1,
+                'genero_fk' => 1, // Ficción contemporánea
+            ],
+            [
+                'libro_fk' => 1,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 1,
+                'genero_fk' => 3, // Realismo mágico
+            ],
+            [
+                'libro_fk' => 2,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 2,
+                'genero_fk' => 4, // Literatura infantil
+            ],
+            [
+                'libro_fk' => 2,
+                'genero_fk' => 5, // Aventura
+            ],
+            [
+                'libro_fk' => 3,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 4,
+                'genero_fk' => 1, // Ficción contemporánea
+            ],
+            [
+                'libro_fk' => 4,
+                'genero_fk' => 6, // Literatura de inmigración
+            ],
+            [
+                'libro_fk' => 5,
+                'genero_fk' => 7, // Romance paranormal
+            ],
+            [
+                'libro_fk' => 5,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 8,
+                'genero_fk' => 11, // Ciencia ficción
+            ],
+            [
+                'libro_fk' => 8,
+                'genero_fk' => 12, // Épico
+            ],
+            [
+                'libro_fk' => 9,
+                'genero_fk' => 5, // Aventura
+            ],
+            [
+                'libro_fk' => 9,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 10,
+                'genero_fk' => 13, // Suspense
+            ],
+            [
+                'libro_fk' => 10,
+                'genero_fk' => 11, // Terror
+            ],
+            [
+                'libro_fk' => 10,
+                'genero_fk' => 14, // Thriller
+            ],
+            [
+                'libro_fk' => 11,
+                'genero_fk' => 1, // Ficción contemporánea
+            ],
+            [
+                'libro_fk' => 11,
+                'genero_fk' => 15, // Relatos cortos
+            ],
+            [
+                'libro_fk' => 11,
+                'genero_fk' => 16, // Drama
+            ],
+            [
+                'libro_fk' => 12,
+                'genero_fk' => 17, // Ensayo
+            ],
+            [
+                'libro_fk' => 12,
+                'genero_fk' => 18, // Biografía
+            ],
+            [
+                'libro_fk' => 12,
+                'genero_fk' => 11, // Terror
+            ],
+            [
+                'libro_fk' => 13,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 13,
+                'genero_fk' => 12, // Épico
+            ],
+            [
+                'libro_fk' => 14,
+                'genero_fk' => 19, // Ficción especulativa
+            ],
+            [
+                'libro_fk' => 14,
+                'genero_fk' => 11, // Terror
+            ],
+            [
+                'libro_fk' => 14,
+                'genero_fk' => 13, // Suspense
+            ],
+            [
+                'libro_fk' => 15,
+                'genero_fk' => 14, // Thriller
+            ],
+            [
+                'libro_fk' => 15,
+                'genero_fk' => 11, // Terror
+            ],
+            [
+                'libro_fk' => 16,
+                'genero_fk' => 20, // Ficción histórica
+            ],
+            [
+                'libro_fk' => 16,
+                'genero_fk' => 7, // Romance
+            ],
+            [
+                'libro_fk' => 17,
+                'genero_fk' => 21, // Western
+            ],
+            [
+                'libro_fk' => 17,
+                'genero_fk' => 5, // Aventura
+            ],
+            [
+                'libro_fk' => 17,
+                'genero_fk' => 22, // Humor negro
+            ],
+            [
+                'libro_fk' => 18,
+                'genero_fk' => 23, // No ficción
+            ],
+            [
+                'libro_fk' => 18,
+                'genero_fk' => 24, // Historia
+            ],
+            [
+                'libro_fk' => 19,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 19,
+                'genero_fk' => 12, // Épico
+            ],
+            [
+                'libro_fk' => 20,
+                'genero_fk' => 2, // Fantasía
+            ],
+            [
+                'libro_fk' => 20,
+                'genero_fk' => 25, // Literatura juvenil
+            ],
+        ]);
+        
     }
 }

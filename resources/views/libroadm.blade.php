@@ -22,6 +22,7 @@
                     <th class="bg-dark text-white">Imagen</th>
                     <th class="bg-dark text-white">Título</th>
                     <th class="bg-dark text-white">Autor</th>
+                    <th class="bg-dark text-white">Genero</th>
                     <th class="bg-dark text-white">Editorial</th>
                     <th class="bg-dark text-white">Año de publicacion</th>
                     <th class="bg-dark text-white">ISBN</th>
@@ -37,6 +38,13 @@
                     <td><img class="w-100" src="{{ $libro->imagen }}" alt="Imagen del posteo"></td>
                     <td>{{ $libro->titulo }}</td>
                     <td>{{ $libro->autor }}</td>
+                    <td>
+                        @forelse($libro->generos as $genero)
+                            <span class="badge bg-secondary">{{ $genero->nombre }}</span>
+                        @empty
+                            <i>Sin géneros</i>
+                        @endforelse
+                    </td>
                     <td>{{ $libro->editorial->nombre }}</td>
                     <td>{{ $libro->anio_publicacion }}</td>
                     <td>{{ $libro->isbn }}</td>
