@@ -5,12 +5,11 @@
 
 <x-layout>
     
-
     <x-slot:title>Blog</x-slot:title>
 
     <div class="row justify-content-center align-items-center my-2">
             <div class="col-9 text-center align-items-center justify-content-center">
-                <h1 class="mosta text-center py-5">Blog de noticias</h1>
+                <h2 class="mosta text-center py-5">Blog de noticias</h2>
             </div>
             @auth
             <div class="col-3 d-flex justify-content-center">

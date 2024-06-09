@@ -2,8 +2,6 @@
 
     <x-slot:title>Administracion</x-slot:title>
 
-	<h1 class="d-none">Panel de Administración</h1>
-
     <section class="py-5 mt-1">
 	<div class="container">
 		<div class="row align-items-center gx-4">

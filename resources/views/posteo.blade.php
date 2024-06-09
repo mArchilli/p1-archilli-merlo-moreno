@@ -11,7 +11,7 @@
                 <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
             </div>
             <div class="col-11">
-                <h1 class="text-center pb-3 mosta">{{ $blog->titulo }}</h1>
+                <h2 class="text-center pb-3 mosta">{{ $blog->titulo }}</h2>
             </div>
     </div>
 

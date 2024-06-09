@@ -7,7 +7,7 @@
                 <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
             </div>
             <div class="col-11">
-                <h1 class="text-center pt-2 pb-4 mosta"> {{ $libro->titulo }}</h1>
+                <h2 class="text-center pt-2 pb-4 mosta"> {{ $libro->titulo }}</h2>
             </div>
     </div>
 

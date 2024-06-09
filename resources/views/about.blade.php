@@ -1,8 +1,6 @@
 <x-layout>
     <x-slot:title>Sobre nosotros</x-slot:title>
 
-	<h1 class="d-none">Sobre nosotros</h1>
-
     <section class="py-5">
 	<div class="mt-5 container">
 		<div class="row align-items-center gx-4">

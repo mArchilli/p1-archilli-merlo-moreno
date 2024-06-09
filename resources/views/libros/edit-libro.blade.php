@@ -8,7 +8,7 @@
                     <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
                 </div>
                 <div class="col-11">
-                    <h1 class="mosta px-2">Editar libro</h1>
+                    <h2 class="mosta px-2">Editar libro</h2>
                 </div>
         </div>
         

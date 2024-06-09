@@ -5,7 +5,7 @@
                 <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
             </div>
             <div class="col-11">
-                <h1 class="my-3 text-danger text-center">¿Estás seguro que deseas eliminar?</h1>
+                <h2 class="my-3 text-danger text-center">¿Estás seguro que deseas eliminar?</h2>
             </div>
     </div>
     

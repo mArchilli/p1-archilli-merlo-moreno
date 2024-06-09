@@ -1,9 +1,6 @@
 <x-layout>
     <x-slot:title>Iniciar Sesión</x-slot:title>
 
-
-    <h1 class="d-none">Inicio de Sesión</h1>
-
     <section class="text-center text-lg-start">
         <div class="container py-4">
             <div class="row g-0 align-items-center justify-content-center">

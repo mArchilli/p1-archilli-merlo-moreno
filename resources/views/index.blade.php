@@ -5,8 +5,6 @@
 <x-layout>
     <x-slot:title>Home</x-slot:title>
 
-    <h1 class="d-none">Libralink</h1>
-
         <div class="row py-lg-5 p-0">
             <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center py-5 py-lg-0">
                 <h2 class="fs-1 font-fantasy pl-5 pr-4 ps-lg-5">Un mundo de fantasía a un <span class="mostaza">click</span> de

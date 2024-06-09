@@ -4,7 +4,7 @@
 
     <div class="row align-items-center">
         <div class="col-10">
-            <h1 class="mosta">Panel de Administracion de Blog</h1>
+            <h2 class="mosta">Panel de Administracion de Blog</h2>
         </div>
     </div>
     
