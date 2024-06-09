@@ -8,14 +8,21 @@
 
     <x-slot:title>Blog</x-slot:title>
 
-    <h1 class="mosta text-center py-5">Blog de noticias</h1>
+    <div class="row justify-content-center align-items-center my-2">
+            <div class="col-9 text-center align-items-center justify-content-center">
+                <h1 class="mosta text-center py-5">Blog de noticias</h1>
+            </div>
+            @auth
+            <div class="col-3 d-flex justify-content-center">
+                <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
+            </div>
+            @endauth
+    </div>
+
+    
 
     {{-- Prueba de auth --}}
-    @auth
-    <div class="mb-5 mt-2 d-flex justify-content-center">
-        <a class="btnespecial" href="{{ route('blog.create.form') }}">Realizar un nuevo Posteo</a>
-    </div>
-    @endauth
+    
 
     <div class="row ">
         @foreach ($blog as $posteo)

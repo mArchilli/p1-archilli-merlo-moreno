@@ -6,7 +6,14 @@
 
     <x-slot:title>Post: {{ $blog->titulo }}</x-slot:title>
 
-    <h1 class="text-center pb-3 mosta">{{ $blog->titulo }}</h1>
+    <div class="row justify-content-center align-items-center my-2">
+            <div class="col-1 text-center">
+                <a class="btn btn-secondary" href="{{ url()->previous() }}">Volver</a>
+            </div>
+            <div class="col-11">
+                <h1 class="text-center pb-3 mosta">{{ $blog->titulo }}</h1>
+            </div>
+    </div>
 
     <div class="row">
         <div class="col-12">
