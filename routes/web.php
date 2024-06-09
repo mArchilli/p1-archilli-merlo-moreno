@@ -15,17 +15,21 @@ Route::get('/admin', [\App\Http\Controllers\IndexController::class, "admin"])
     ->middleware('check-admin-rol');
 
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])
+    ->middleware('auth')
     ->name('catalogo');
 
 Route::get('/catalogo/{id}/libro', [\App\Http\Controllers\LibroController::class, "viewBook"])
     ->name('catalogo.view.book')
+    ->middleware('auth')
     ->whereNumber('id');
 
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, "blog"])
+    ->middleware('auth')
     ->name('blog');
 
 Route::get('/blog/{id}/post', [\App\Http\Controllers\BlogController::class, "viewPost"])
     ->name('blog.view.post')
+    ->middleware('auth')
     ->whereNumber('id');
 
 // Blog ABM
