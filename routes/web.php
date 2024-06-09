@@ -11,7 +11,8 @@ Route::get('/about', [\App\Http\Controllers\IndexController::class, "about"])
 
 Route::get('/admin', [\App\Http\Controllers\IndexController::class, "admin"])
     ->name('admin')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/catalogo', [\App\Http\Controllers\LibroController::class, "catalogo"])
     ->name('catalogo');
@@ -30,68 +31,82 @@ Route::get('/blog/{id}/post', [\App\Http\Controllers\BlogController::class, "vie
 // Blog ABM
 Route::get('/blogadm', [\App\Http\Controllers\BlogController::class, "blogadm"])
     ->name('blogadm')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/blogadm/publicar', [\App\Http\Controllers\BlogController::class, "createForm"])
     ->name('blog.create.form')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::post('/blogadm/publicar', [\App\Http\Controllers\BlogController::class, "createProcess"])
     ->name('blog.create.process')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class, "editForm"])
     ->name('blog.edit.form')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::post('/blogadm/{id}/editar', [\App\Http\Controllers\BlogController::class, "editProcess"])
     ->name('blog.edit.process')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::class, "deleteForm"])
     ->name('blog.delete.form')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::post('/blogadm/{id}/eliminar', [\App\Http\Controllers\BlogController::class, "deleteProcess"])
     ->name('blog.delete.process')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 // Libro ABM
 Route::get('/libroadm', [\App\Http\Controllers\LibroController::class, "libroadm"])
     ->name('libroadm')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createForm"])
     ->name('libro.create.form')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::post('/libroadm/publicar', [\App\Http\Controllers\LibroController::class, "createProcess"])
     ->name('libro.create.process')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editForm"])
     ->name('libro.edit.form')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::post('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::class, "editProcess"])
     ->name('libro.edit.process')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::get('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::class, "deleteForm"])
     ->name('libro.delete.form')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 Route::post('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::class, "deleteProcess"])
     ->name('libro.delete.process')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
 
 // Auth
 Route::get('/iniciar-sesion', [\App\Http\Controllers\AuthController::class, "loginForm"])
