@@ -78,7 +78,7 @@ body {
     transform: scale(1.1);
 }
 
-.btnespecial, .btneliminar, .btneditar{
+.btnespecial, .btneliminar, .btneditar, .btnRegistrarse{
     background-color: #ca8e5e;
     border-radius: 5px;
     border: none;
@@ -108,6 +108,14 @@ body {
 
 .btnespecial:hover {
     background-color: #d8ae8b;
+}
+
+.btnRegistrarse{
+    background-color: #2f36c7;
+}
+
+.btnRegistrarse:hover{
+    background-color: #2f37c786;
 }
 
 .bgsuscripcion {

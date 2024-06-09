@@ -104,6 +104,9 @@ Route::post('/iniciar-sesion', [\App\Http\Controllers\AuthController::class, "lo
 Route::post('/cerrar-sesion', [\App\Http\Controllers\AuthController::class, "logoutProcess"])
     ->name('auth.logout.process');
 
+Route::get('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "registerForm"])
+    ->name('auth.register.form');
+
 
 
 

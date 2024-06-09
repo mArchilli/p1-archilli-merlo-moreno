@@ -39,4 +39,9 @@ class AuthController extends Controller
         ->route('auth.login.form')
         ->with('feedback.message', 'Cierre de sesión correcto. ¡Te esperamos pronto!');
     }
+
+    public function registerForm()
+    {
+        return view('auth.register-form');
+    }
 }

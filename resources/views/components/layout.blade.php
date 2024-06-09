@@ -63,6 +63,11 @@
                                     <a class="btnespecial" href="{{ route('auth.login.form') }}">Iniciar Sesión</a>
                                 </div>
                             </li>
+                            <li class="nav-item ">
+                                <div class="nav-link">
+                                    <a class="btnRegistrarse" href="{{ route('auth.register.form') }}">Registrarse</a>
+                                </div>
+                            </li>
                             @else
                             <li class="nav-item">
                                 <form action="{{ route('auth.logout.process') }}" method="POST">
