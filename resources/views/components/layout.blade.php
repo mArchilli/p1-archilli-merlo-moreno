@@ -42,6 +42,7 @@
                                 <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
                                     href="{{ route('index') }}">Home</a>
                             </li>
+                            @auth
                             <li class="nav-item">
 
                                 <a class="nav-link text-white px-lg-3 py-lg-2 " aria-current="page"
@@ -51,7 +52,7 @@
                                 <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
                                     href="{{ route('blog') }}">Blog</a>
                             </li>
-
+                            @endauth
                             <li class="nav-item">
                                 <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
                                     href="{{ route('about') }}">Sobre Nosotros</a>

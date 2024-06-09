@@ -86,7 +86,6 @@ Route::post('/libroadm/{id}/editar', [\App\Http\Controllers\LibroController::cla
 Route::get('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::class, "deleteForm"])
     ->name('libro.delete.form')
     ->whereNumber('id')
-    ->middleware('auth')
     ->middleware('auth');
 
 Route::post('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::class, "deleteProcess"])
