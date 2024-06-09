@@ -16,7 +16,7 @@
                         <div class="card-body p-5 shadow-5">
                             <h2 class="fw-bold mosta">Crear cuenta</h2>
                             <h3 class="fw-bold mb-5 mosta">Ingresa tus datos</h3>
-                            <form action="{{ route('auth.login.process') }}" method="POST">
+                            <form action="{{ route('auth.register.process') }}" method="POST">
 
                                 @csrf
 

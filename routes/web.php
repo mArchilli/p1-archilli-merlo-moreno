@@ -107,6 +107,9 @@ Route::post('/cerrar-sesion', [\App\Http\Controllers\AuthController::class, "log
 Route::get('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "registerForm"])
     ->name('auth.register.form');
 
+Route::post('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "registerProcess"])
+    ->name('auth.register.process');
+
 
 
 
