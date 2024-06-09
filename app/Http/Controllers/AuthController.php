@@ -78,8 +78,8 @@ class AuthController extends Controller
         User::create($input);
 
         return redirect()
-            ->route('catalogo')
-            ->with('feedback.message', 'Bienvenido/a <b>"' . e($input['name']) . '"</b>.');
+            ->route('auth.login.form')
+            ->with('feedback.message', 'Inicia sesion para continuar.');
     }
 
 }
