@@ -110,6 +110,11 @@ Route::get('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "regis
 Route::post('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "registerProcess"])
     ->name('auth.register.process');
 
+Route::get('/redirect-after-login', function () {
+        // Esta ruta solo redirige basándose en el rol
+        return redirect()->route('index');  // Puedes tener una vista simple indicando que está redirigiendo
+    })->middleware(['auth', 'check-user-rol'])->name('redirect.after.login');
+
 
 
 

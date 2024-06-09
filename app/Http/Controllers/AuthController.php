@@ -22,10 +22,11 @@ class AuthController extends Controller
     }
 
     public function loginProcess(Request $request)
-    {
-        $credentials = $request->only(['email', 'password']);
-        // si no me puedo autenticar
-        if(!auth()->attempt($credentials)) {
+{
+    $credentials = $request->only(['email', 'password']);
+
+        // Si no se puede autenticar
+        if (!auth()->attempt($credentials)) {
             return redirect()
                 ->back(fallback: route('auth.login.form'))
                 ->withInput()
@@ -33,10 +34,10 @@ class AuthController extends Controller
                 ->with('feedback.type', 'danger');
         }
 
-        return redirect()
-        ->route('admin')
-        ->with('feedback.message', 'Inicio exitoso. ¡Hola de nuevo!');
+        // Redirige a la ruta que maneja la redirección por rol
+        return redirect()->route('redirect.after.login')->with('feedback.message', 'Inicio exitoso. ¡Hola de nuevo!');
     }
+
 
     public function logoutProcess(Request $request)
     {

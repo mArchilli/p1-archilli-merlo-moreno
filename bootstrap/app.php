@@ -19,6 +19,10 @@ return Application::configure(basePath: dirname(__DIR__))
             session()->flash('feedback.type', 'danger');
             return route('auth.login.form');
         });
+
+        $middleware->alias([
+            'check-user-rol' => \App\Http\Middleware\CheckUserRole::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
