@@ -17,7 +17,7 @@ class CheckAdminRole
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->rol !== 'admin') {
+        if (Auth::check() && Auth::user()->role !== 'admin') {
             // Redirigir al usuario a la página de inicio
             return redirect()->route('index')
             ->with('feedback.message', 'Es necesario permisos de administrador.')

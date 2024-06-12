@@ -54,6 +54,10 @@
                                 <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
                                     href="{{ route('blogadm') }}">Blog</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white px-lg-3 py-lg-2" aria-current="page"
+                                    href="{{ route('usersadm') }}">Usuarios</a>
+                            </li>
 
                             @guest
                             <li class="nav-item ">

@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Hash;
 class AuthController extends Controller
 {
 
-    public function users(){
+    public function usersadm(){
         $users = User::all();
-        return view('users', [
-            'users' => $users,
+        return view('usersadm', [
+            'usersadm' => $users,
         ]);
     }
 
@@ -20,6 +20,50 @@ class AuthController extends Controller
     {
         return view('auth.login-form');
     }
+
+    public function editForm(int $id)
+    {
+        return view('user.edit-user', [
+            'user' => User::findOrFail($id),
+        ]);
+    }
+
+    public function editProcess(int $id, Request $request) {
+        $request->validate([
+            'name' => 'required|min:2',
+            'lastName' => 'required|min:2',
+            'email' => 'required|email',
+            'role' => 'required',
+        ], [
+            'name.required' => 'El nombre debe ser ingresado',
+            'lastName.required' => 'El apellido debe ser ingresado',
+            'email.required' => 'El correo debe ser ingresado',
+            'role.required' => 'El rol debe ser ingresado',
+        ]);
+
+        $input = $request->only(['name', 'lastName', 'email', 'role']);
+
+        $usuario = User::findOrFail($id);
+
+        // Verificar si se proporciona una nueva contraseña y hashearla si es necesario
+        if ($request->filled('password')) {
+            $input['password'] = Hash::make($request->input('password'));
+        } else {
+            $input['password'] = $usuario->password;
+        }
+
+        // Actualizar el usuario con los datos proporcionados
+        $usuario->update($input);
+
+        // Construir el nombre completo del usuario
+        $userName = $input['name'] . ' ' . $input['lastName'];
+
+        // Redirigir con un mensaje de éxito
+        return redirect()
+            ->route('usersadm')
+            ->with('feedback.message', 'El usuario <b>"' . e($userName) . '"</b> se editó con éxito.');
+    }
+
 
     public function loginProcess(Request $request)
 {
@@ -73,7 +117,7 @@ class AuthController extends Controller
 
         $input = $request->only(['name', 'lastName', 'email', 'password']);
         $input['password'] = Hash::make($request->password); //Hasheo a la clave
-        $input['rol'] = 'user'; // Valor por defecto
+        $input['role'] = 'user'; // Valor por defecto
 
         User::create($input);
 

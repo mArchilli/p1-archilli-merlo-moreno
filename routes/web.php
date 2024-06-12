@@ -112,6 +112,25 @@ Route::post('/libroadm/{id}/eliminar', [\App\Http\Controllers\LibroController::c
     ->middleware('auth')
     ->middleware('check-admin-rol');
 
+// Users routes
+
+Route::get('/usersadm', [\App\Http\Controllers\AuthController::class, "usersadm"])
+    ->name('usersadm')
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
+
+Route::get('/usersadm/{id}/editar', [\App\Http\Controllers\AuthController::class, "editForm"])
+    ->name('user.edit.form')
+    ->whereNumber('id')
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
+
+Route::post('/usersadm/{id}/editar', [\App\Http\Controllers\AuthController::class, "editProcess"])
+    ->name('user.edit.process')
+    ->whereNumber('id')
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
+
 // Auth
 Route::get('/iniciar-sesion', [\App\Http\Controllers\AuthController::class, "loginForm"])
     ->name('auth.login.form');

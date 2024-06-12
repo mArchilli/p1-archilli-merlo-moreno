@@ -37,7 +37,7 @@
                         <td>{{ $posteo->subtitulo }}</td>
                         <td>{{ $posteo->categoria }}</td>
                         <td>{{ $posteo->autor }}</td>
-                        <td> {{ Str::limit($posteo->texto, 150) }}</td>
+                        <td>{{ Str::limit($posteo->texto, 150) }}</td>
                         <td>
                             <div class="d-flex flex-column">
                                 <a href="{{ route('blog.edit.form', ['id' => $posteo->id]) }}" class="my-3 btneditar text-center">Editar</a>

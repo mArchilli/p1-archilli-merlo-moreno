@@ -19,9 +19,9 @@ class CheckUserRole
     {
         if (Auth::check()) {
             $user = Auth::user();
-            if ($user->rol == 'admin') {
+            if ($user->role == 'admin') {
                 return redirect()->route('admin');
-            } elseif ($user->rol == 'user') {
+            } elseif ($user->role == 'user') {
                 return redirect()->route('index');
             }
         }
