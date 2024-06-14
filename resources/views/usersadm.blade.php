@@ -34,7 +34,7 @@
                     <td>
                         <div class="d-flex flex-column">
                             <a href="{{ route('user.edit.form', ['id' => $user->id]) }}" class="my-3 btneditar text-center">Editar</a>
-                           
+                            <a href="{{ route('user.delete.form', ['id' => $user->id]) }}" class="my-3 btneliminar">Eliminar</a>
                         </div>
                     </td>
                 </tr>

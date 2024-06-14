@@ -131,6 +131,18 @@ Route::post('/usersadm/{id}/editar', [\App\Http\Controllers\AuthController::clas
     ->middleware('auth')
     ->middleware('check-admin-rol');
 
+Route::get('/usersadm/{id}/eliminar', [\App\Http\Controllers\AuthController::class, "deleteForm"])
+    ->name('user.delete.form')
+    ->whereNumber('id')
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
+
+Route::post('/usersadm/{id}/eliminar', [\App\Http\Controllers\AuthController::class, "deleteProcess"])
+    ->name('user.delete.process')
+    ->whereNumber('id')
+    ->middleware('auth')
+    ->middleware('check-admin-rol');
+
 // Auth
 Route::get('/iniciar-sesion', [\App\Http\Controllers\AuthController::class, "loginForm"])
     ->name('auth.login.form');

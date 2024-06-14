@@ -28,6 +28,13 @@ class AuthController extends Controller
         ]);
     }
 
+    public function deleteForm(int $id)
+    {
+        return view('user.delete-user', [
+            'user' => User::findOrFail($id),
+        ]);
+    }
+
     public function editProcess(int $id, Request $request) {
         $request->validate([
             'name' => 'required|min:2',
@@ -64,6 +71,18 @@ class AuthController extends Controller
             ->with('feedback.message', 'El usuario <b>"' . e($userName) . '"</b> se editó con éxito.');
     }
 
+    public function deleteProcess(int $id)
+    {
+        $user = User::findOrFail($id);
+
+        $userEliminado = $user->name;
+
+        $user->delete();
+
+        return redirect()
+            ->route('usersadm')
+            ->with('feedback.message', 'El usuario <b>"' . e($userEliminado) . '"</b> se eliminó con éxito.');
+    }
 
     public function loginProcess(Request $request)
 {
