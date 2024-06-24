@@ -47,9 +47,11 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="rol" class="form-label fw-bold">Rol</label>
+                    <label for="rol" class="form-label fw-bold">Suscripcion</label>
                     <select id="rol" name="role" class="form-control">
-                        <option value="user" {{ $user->role == 'user' ? 'selected' : '' }}>User</option>
+                        <option value="gratis" {{ $user->role == 'gratis' ? 'selected' : '' }}>Gratis</option>
+                        <option value="pro" {{ $user->role == 'pro' ? 'selected' : '' }}>Pro</option>
+                        <option value="premium" {{ $user->role == 'premium' ? 'selected' : '' }}>Premium</option>
                         <option value="admin" {{ $user->role == 'admin' ? 'selected' : '' }}>Admin</option>
                     </select>
                     @error('role')

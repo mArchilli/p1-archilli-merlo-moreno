@@ -125,18 +125,19 @@ class AuthController extends Controller
             'name' => 'required',
             'lastName' => 'required',
             'email' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'role' => 'required'
             
         ], [
             'name.required' => 'El campo nombre debe ser completado.',
             'lastName.required' => 'El campo apellido debe ser completado.',
             'email.required' => 'El campo correo debe ser completado.',
-            'password.required' => 'El campo contraseña debe ser completado.'
+            'password.required' => 'El campo contraseña debe ser completado.',
+            'role.required' => 'El plan debe ser seleccionado.'
         ]);
 
-        $input = $request->only(['name', 'lastName', 'email', 'password']);
+        $input = $request->only(['name', 'lastName', 'email', 'password', 'role']);
         $input['password'] = Hash::make($request->password); //Hasheo a la clave
-        $input['role'] = 'user'; // Valor por defecto
 
         User::create($input);
 

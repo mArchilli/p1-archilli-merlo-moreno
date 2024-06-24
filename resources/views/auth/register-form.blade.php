@@ -19,20 +19,17 @@
 
                                 <div class="form-outline mb-4">
                                     <label for="name" class="form-label">Nombre</label>
-                                    <input type="text" id="name" name="name" class="form-control"
-                                        value="{{ old('email') }}">
+                                    <input type="text" id="name" name="name" class="form-control" value="{{ old('name') }}">
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label for="lastName" class="form-label">Apellido</label>
-                                    <input type="text" id="lastName" name="lastName" class="form-control"
-                                        value="{{ old('email') }}">
+                                    <input type="text" id="lastName" name="lastName" class="form-control" value="{{ old('lastName') }}">
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" name="email" class="form-control"
-                                        value="{{ old('email') }}">
+                                    <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}">
                                 </div>
 
                                 <div class="form-outline mb-4">
@@ -41,7 +38,28 @@
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="checkbox" id="checkbox" name="checkbox">
+                                    <label class="form-label d-block">Suscripción</label>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="form-check p-3 rounded-4 border text-center" style="width: 30%;">
+                                            <input type="radio" id="gratis" name="role" value="gratis" class="form-check-input" checked required>
+                                            <label for="gratis" class="form-check-label d-block">Gratis</label>
+                                            <p class="mb-0">0$</p>
+                                        </div>
+                                        <div class="form-check p-3 rounded-4 border text-center mx-2" style="width: 30%;">
+                                            <input type="radio" id="pro" name="role" value="pro" class="form-check-input" required>
+                                            <label for="pro" class="form-check-label d-block">Pro</label>
+                                            <p class="mb-0">9$</p>
+                                        </div>
+                                        <div class="form-check p-3 rounded-4 border text-center" style="width: 30%;">
+                                            <input type="radio" id="premium" name="role" value="premium" class="form-check-input" required>
+                                            <label for="premium" class="form-check-label d-block">Premium</label>
+                                            <p class="mb-0">18$</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="checkbox" id="checkbox" name="checkbox" required>
                                     <label for="checkbox" class="form-label">Acepto los términos y condiciones</label>
                                 </div>
 
@@ -50,8 +68,6 @@
                         </div>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </section>

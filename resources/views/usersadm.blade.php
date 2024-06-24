@@ -18,7 +18,7 @@
                     <th class="bg-dark text-white">Nombre</th>
                     <th class="bg-dark text-white">Apellido</th>
                     <th class="bg-dark text-white">Correo</th>
-                    <th class="bg-dark text-white">Rol</th>
+                    <th class="bg-dark text-white">Suscripcion</th>
                     <th class="bg-dark text-white">Acciones</th>
                 </tr>
             </thead>

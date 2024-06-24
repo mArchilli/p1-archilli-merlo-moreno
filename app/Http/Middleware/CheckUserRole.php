@@ -21,7 +21,7 @@ class CheckUserRole
             $user = Auth::user();
             if ($user->role == 'admin') {
                 return redirect()->route('admin');
-            } elseif ($user->role == 'user') {
+            } elseif ($user->role == 'user' || $user->role == 'gratis' || $user->role == 'pro' || $user->role == 'premium') {
                 return redirect()->route('index');
             }
         }
