@@ -5,7 +5,7 @@
 	<div class="mt-5 container">
 		<div class="row align-items-center gx-4">
 			<div class="col-md-5">
-				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="{{ asset('images/about/libro.jpg') }}"></div>
+				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" alt="Imagen de portada sobre nosotros" src="{{ asset('images/about/libro.jpg') }}"></div>
 			</div>
 			<div class="col-md-6 offset-md-1">
 				<div class="ms-md-2 ms-lg-5">
@@ -28,7 +28,7 @@
 	<div class="container">
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-md-8">
-				<h2 class="mosta pb-4 fw-bold display-5">Descubrí lo que tenemos para ti</h2>
+				<h2 class="mosta pb-4 fw-bold display-5">Descubre lo que tenemos para ti</h2>
 				<p class="lead mb-4">Explora nuestra diversa selección de libros
                     y sumérgete en tu próxima gran aventura literaria.</p>
 			</div>

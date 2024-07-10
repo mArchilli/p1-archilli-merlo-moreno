@@ -15,7 +15,7 @@
 				</div>
 			</div>
             <div class="col-md-6">
-				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="{{ asset('images/about/admin.jpg') }}"></div>
+				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" alt="Imagen de panel de administrador" src="{{ asset('images/about/admin.jpg') }}"></div>
 			</div>
 		</div>
 	</div>
