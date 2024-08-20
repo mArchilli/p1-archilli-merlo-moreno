@@ -25,7 +25,7 @@
                     <div class="card cardLibros bg-dark text-white">
                         <div class="card-body text-center d-flex flex-column justify-content-between">
                             <img class="img-fluid" src="{{ $lib->imagen }}" alt="Imagen del libro">
-                            <h2 class="mosta fs-4 pt-3 my-0">{{ $lib->titulo }}</h2>
+                            <h3 class="mosta fs-4 pt-3 my-0">{{ $lib->titulo }}</h3>
                             <p class="card-text my-0 py-0">{{ $lib->autor }}</p>
                             <p class="card-text my-0 py-0">{{ $lib->editorial->nombre }}</p>
                             <p class="card-text my-0 py-0">{{ $lib->anio_publicacion }}</p>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="backside bg-dark">
                     <div class="card card-body text-center bg-dark text-white h-catalogo justify-content-evenly">
-                        <h2 class="mosta p-3">{{ $lib->titulo }}</h2>
+                        <h3 class="mosta p-3">{{ $lib->titulo }}</h3>
                         @forelse($lib->generos as $genero)
                             <span class="badge m-1">{{ $genero->nombre }}</span>
                         @empty
