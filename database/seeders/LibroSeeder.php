@@ -129,7 +129,7 @@ class LibroSeeder extends Seeder
                 'editorial_fk' => '9',
                 'anio_publicacion' => 1996,
                 'isbn' => '978-8496208005',
-                'descripcion' => 'Juego de tronos (Canción de hielo y fuego, Libro 1)" de George R.R. Martin: En este primer libro de la saga épica, Martin nos transporta a un mundo de intrigas políticas, traiciones y batallas épicas. Con personajes complejos como los Stark, Lannister y Targaryen, la historia se desarrolla en el continente de Poniente, donde las casas nobles luchan por el Trono de Hierro. Con su narrativa absorbente y su capacidad para subvertir las expectativas del lector, Martin crea un mundo vibrante y emocionante que ha cautivado a millones de lectores en todo el mundo.',
+                'descripcion' => 'Juego de tronos (Canción de hielo y fuego, Libro 1) de George R.R. Martín: En este primer libro de la saga épica, Martín nos transporta a un mundo de intrigas políticas, traiciones y batallas épicas. Con personajes complejos como los Stark, Lannister y Targaryen, la historia se desarrolla en el continente de Poniente, donde las casas nobles luchan por el Trono de Hierro. Con su narrativa absorbente y su capacidad para subvertir las expectativas del lector, Martín crea un mundo vibrante y emocionante que ha cautivado a millones de lectores en todo el mundo.',
                 'imagen' => 'images/libros/juego-de-tronos-hieloyfuego.jpg',
             ],
             [
@@ -184,7 +184,7 @@ class LibroSeeder extends Seeder
                 'editorial_fk' => '14',
                 'anio_publicacion' => 1954,
                 'isbn' => '978-8445073768',
-                'descripcion' => 'El primer libro de la saga "El Señor de los Anillos", escrito por J.R.R. Tolkien.',
+                'descripcion' => 'El Señor de los Anillos: La Comunidad del Anillo es la primera parte de la épica trilogía escrita por J.R.R. Tolkien. La historia sigue a un hobbit llamado Frodo Bolsón, quien hereda un poderoso y peligroso anillo. Este anillo, conocido como el Anillo Único, tiene el poder de dominar a todos los demás anillos mágicos y es buscado por el malvado Sauron para conquistar la Tierra Media.',
                 'imagen' => 'images/libros/lord-of-the-ring.jpg',
             ],
             [

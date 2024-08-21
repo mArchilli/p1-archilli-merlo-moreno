@@ -28,9 +28,8 @@
 	<div class="container">
 		<div class="row justify-content-center text-center mt-5">
 			<div class="col-md-8">
-				<h2 class="mosta pb-4 fw-bold display-5">Descubre lo que tenemos para ti</h2>
-				<p class="lead mb-4">Explora nuestra diversa selección de libros
-                    y sumérgete en tu próxima gran aventura literaria.</p>
+				<h2 class="mosta pb-4 fw-bold display-5">Descubrí lo que tenemos para vos</h2>
+				<p class="lead mb-4">Explorá nuestra diversa selección de libros y sumergite en tu próxima gran aventura literaria.</p>
 			</div>
 			<div class="col-lg-8">
 				<div class="row gy-3">
@@ -60,8 +59,7 @@
 			<div class="col-lg-8 col-xl-7">
 				<span class="text-muted">F.A.Q</span>
 				<h2 class="mosta display-5 fw-bold pb-3">Preguntas Frecuentes</h2>
-				<p class="lead">Encuentra respuestas rápidas a tus dudas más comunes y obtén más información sobre
-                    cómo aprovechar al máximo nuestra plataforma.</p>
+				<p class="lead">Encontrá respuestas rápidas a tus dudas más comunes y obtené más información sobre cómo aprovechar al máximo nuestra plataforma.</p>
 			</div>
 		</div>
 		<div class="row justify-content-center">
@@ -80,7 +78,7 @@
 						</div>¿Cómo puedo registrarme en Libralink?</button></h3>
 						<div aria-labelledby="Questions-headingOne" class="accordion-collapse collapse" data-bs-parent="#Questions-accordion" id="Questions-collapseOne">
 							<div class="accordion-body">
-                            Para registrarte, simplemente haz clic en el botón "Regístrate" en nuestra página de inicio, completa el formulario con tus datos y sigue las instrucciones para confirmar tu cuenta. ¡Es rápido y fácil!
+                            Para registrarte, simplemente hacé clic en el botón 'Regístrate' en nuestra página de inicio, completá el formulario con tus datos y seguí las instrucciones para confirmar tu cuenta. ¡Es rápido y fácil!
 							</div>
 						</div>
 					</div>
