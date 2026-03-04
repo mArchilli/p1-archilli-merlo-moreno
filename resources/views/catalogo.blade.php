@@ -5,14 +5,9 @@
     <x-slot:title>Catálogo</x-slot:title>
 
     <div class="row justify-content-center align-items-center my-2">
-            <div class="col-9 text-center align-items-center justify-content-center">
+            <div class="col-12 text-center align-items-center justify-content-center">
                 <h2 class="fs-3 p-5 text-center mosta">Explorá los diferentes libros que tenemos para ofrecerte</h2>
-            </div>
-            @auth
-            <div class="col-3 d-flex justify-content-center">
-                <a class="btnespecial" href="{{ route('libro.create.form') }}">Cargar nuevo libro</a>
-            </div>
-            @endauth
+            </div>   
     </div>
     
 

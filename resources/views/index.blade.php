@@ -91,7 +91,7 @@
     </div>
 </div>
 
-
+    @guest
     <div class="pricing-header pt-5 mx-auto text-center">
         <h2 class="display-4 p-4 mostaza">Elegí tu suscripción</h2>
     </div>
@@ -110,7 +110,7 @@
                         <li class="p-3 fw-bold">Resúmenes y capítulos iniciales</li>
                         <li class="p-3 fw-bold">Acceso al centro de ayuda e información</li>
                     </ul>
-                    <a class="btnespecial" href="{{ route('auth.login.form') }}">Suscribíte</a>
+                    <a class="btnespecial" href="{{ route('auth.register.form') }}">Suscribíte</a>
                 </div>
             </div>
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow">
@@ -125,7 +125,7 @@
                         <li class="p-3 fw-bold">Descargas ilimitadas de todos nuestros libros</li>
                         <li class="p-3 fw-bold">Acceso exclusivo al blog de noticias y críticas</li>
                     </ul>
-                    <a class="btnespecial" href="{{ route('auth.login.form') }}">Empieza Ahora</a>
+                    <a class="btnespecial" href="{{ route('auth.register.form') }}">Empieza Ahora</a>
                 </div>
             </div>
             <div class="card bgsuscripcion col-12 col-lg-3 box-shadow ">
@@ -140,10 +140,11 @@
                         <li class="p-3 fw-bold"> Postea en nuestro blog exclusivo para miembros VIP</li>
                         <li class="p-3 fw-bold"> Acceso anticipado a lanzamientos</li>
                     </ul>
-                    <a class="btnespecial" href="{{ route('about') }}">Contactanos</a>
+                    <a class="btnespecial" href="{{ route('auth.register.form') }}">Contactanos</a>
                 </div>
             </div>
         </div>
+        @endguest
 
     </div>
 </x-layout>
