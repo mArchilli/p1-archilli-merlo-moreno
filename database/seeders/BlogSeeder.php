@@ -27,7 +27,7 @@ class BlogSeeder extends Seeder
                 'subtitulo' => 'Continuando la saga épica',
                 'categoria' => 'Cine',
                 'autor' => 'Jane Smith',
-                'texto' => 'La segunda película de Dune, dirigida por Denis Villeneuve, promete ser tan impresionante como la primera. Con más drama, política y arenas desérticas, los fans están expectantes. Esta nueva entrega profundizará en la complejidad del universo Dune, explorando más sobre la resistencia de los Fremen y la lucha por el control del especia. Las expectativas son altas y el reparto, incluyendo a Timothée Chalamet y Zendaya, ha prometido actuaciones que son fieles al espíritu del libro original de Frank Herbert.',
+                'texto' => 'La segunda película de Dune, dirigida por Denis Villeneuve, promete ser tan impresionante como la primera. Con más drama, política y arenas desérticas, los fans están expectantes. Esta nueva entrega profundizará en la complejidad del universo Dune, explorando más sobre la resistencia de los Fremen y la lucha por el control de la especia. Las expectativas son altas y el reparto, incluyendo a Timothée Chalamet y Zendaya, ha prometido actuaciones que son fieles al espíritu del libro original de Frank Herbert.',
                 'imagen' => 'images/blog/card-dune.jpg',
             ],
             [
