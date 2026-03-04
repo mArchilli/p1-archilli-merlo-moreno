@@ -122,30 +122,54 @@ class AuthController extends Controller
     public function registerProcess(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'name'     => 'required',
             'lastName' => 'required',
-            'email' => 'required',
-            'password' => 'required',
-            'role' => 'required',
-            'checkbox' => 'required'
-            
+            'email'    => 'required|email|unique:users,email',
+            'password' => 'required|min:6',
+            'role'     => 'required|in:gratis,pro,premium',
+            'checkbox' => 'required',
         ], [
-            'name.required' => 'El campo nombre debe ser completado.',
+            'name.required'     => 'El campo nombre debe ser completado.',
             'lastName.required' => 'El campo apellido debe ser completado.',
-            'email.required' => 'El campo correo debe ser completado.',
+            'email.required'    => 'El campo correo debe ser completado.',
+            'email.email'       => 'El correo ingresado no es válido.',
+            'email.unique'      => 'Ya existe una cuenta registrada con ese correo.',
             'password.required' => 'El campo contraseña debe ser completado.',
-            'role.required' => 'El plan debe ser seleccionado.',
-            'checkbox.required' => 'Debe aceptar los terminos y condiciones de LibraLink.'
+            'password.min'      => 'La contraseña debe tener al menos 6 caracteres.',
+            'role.required'     => 'El plan debe ser seleccionado.',
+            'role.in'           => 'El plan seleccionado no es válido.',
+            'checkbox.required' => 'Debe aceptar los términos y condiciones de LibraLink.',
         ]);
 
-        $input = $request->only(['name', 'lastName', 'email', 'password', 'role']);
-        $input['password'] = Hash::make($request->password); //Hasheo a la clave
+        $role = $request->input('role');
 
-        User::create($input);
+        // Planes que requieren pago
+        if (in_array($role, ['pro', 'premium'])) {
+            // Guardar datos del formulario en sesión para recuperarlos tras el pago
+            $request->session()->put('pending_register', [
+                'name'     => $request->input('name'),
+                'lastName' => $request->input('lastName'),
+                'email'    => $request->input('email'),
+                'password' => $request->input('password'), // se hashea al crear el usuario
+                'role'     => $role,
+            ]);
+
+            // Redirigir al proceso de pago con MercadoPago
+            return redirect()->route('payment.create');
+        }
+
+        // Plan gratuito: crear el usuario directamente
+        User::create([
+            'name'     => $request->input('name'),
+            'lastName' => $request->input('lastName'),
+            'email'    => $request->input('email'),
+            'password' => Hash::make($request->input('password')),
+            'role'     => $role,
+        ]);
 
         return redirect()
             ->route('auth.login.form')
-            ->with('feedback.message', 'Inicia sesion para continuar.');
+            ->with('feedback.message', 'Cuenta creada con éxito. Iniciá sesión para continuar.');
     }
 
 }

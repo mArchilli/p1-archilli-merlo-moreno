@@ -52,22 +52,31 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label d-block">Suscripción</label>
                                     <div class="d-flex justify-content-between">
-                                        <div class="form-check p-3 rounded-4 border text-center" style="width: 30%;">
+                                        <div class="form-check p-3 rounded-4 border text-center plan-card" style="width: 30%;">
                                             <input type="radio" id="gratis" name="role" value="gratis" class="form-check-input" checked required>
-                                            <label for="gratis" class="form-check-label d-block">Gratis</label>
-                                            <p class="mb-0">0$</p>
+                                            <label for="gratis" class="form-check-label d-block fw-semibold">Gratis</label>
+                                            <p class="mb-0 fw-bold">$0</p>
                                         </div>
-                                        <div class="form-check p-3 rounded-4 border text-center mx-2" style="width: 30%;">
+                                        <div class="form-check p-3 rounded-4 border text-center plan-card mx-2" style="width: 30%;">
                                             <input type="radio" id="pro" name="role" value="pro" class="form-check-input" required>
-                                            <label for="pro" class="form-check-label d-block">Pro</label>
-                                            <p class="mb-0">9$</p>
+                                            <label for="pro" class="form-check-label d-block fw-semibold">Pro</label>
+                                            <p class="mb-0 fw-bold">$9</p>
+                                            <span class="badge bg-primary mt-1" style="font-size: 0.6rem;">MercadoPago</span>
                                         </div>
-                                        <div class="form-check p-3 rounded-4 border text-center" style="width: 30%;">
+                                        <div class="form-check p-3 rounded-4 border text-center plan-card" style="width: 30%;">
                                             <input type="radio" id="premium" name="role" value="premium" class="form-check-input" required>
-                                            <label for="premium" class="form-check-label d-block">Premium</label>
-                                            <p class="mb-0">18$</p>
+                                            <label for="premium" class="form-check-label d-block fw-semibold">Premium</label>
+                                            <p class="mb-0 fw-bold">$18</p>
+                                            <span class="badge bg-primary mt-1" style="font-size: 0.6rem;">MercadoPago</span>
                                         </div>
                                     </div>
+                                    <p class="text-muted mt-2 mb-0" style="font-size: 0.8rem;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-info-circle me-1" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                        </svg>
+                                        Los planes <strong>Pro</strong> y <strong>Premium</strong> requieren pago mediante MercadoPago antes de completar el registro.
+                                    </p>
                                     @error('role')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
@@ -81,7 +90,7 @@
                                     @enderror
                                 </div>
 
-                                <button type="submit" class="btnespecial btn-block mb-4 w-100">Registrarse</button>
+                                <button type="submit" class="btnespecial btn-block mb-4 w-100" id="submit-btn">Registrarse</button>
                             </form>
                         </div>
                     </div>
@@ -89,4 +98,21 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const planRadios = document.querySelectorAll('input[name="role"]');
+        const submitBtn  = document.getElementById('submit-btn');
+
+        function updateButton() {
+            const selected = document.querySelector('input[name="role"]:checked');
+            if (selected && (selected.value === 'pro' || selected.value === 'premium')) {
+                submitBtn.textContent = 'Continuar al pago con MercadoPago';
+            } else {
+                submitBtn.textContent = 'Registrarse';
+            }
+        }
+
+        planRadios.forEach(radio => radio.addEventListener('change', updateButton));
+        updateButton();
+    </script>
 </x-layout>

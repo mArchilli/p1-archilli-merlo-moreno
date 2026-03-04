@@ -159,6 +159,19 @@ Route::get('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "regis
 Route::post('/crear-cuenta', [\App\Http\Controllers\AuthController::class, "registerProcess"])
     ->name('auth.register.process');
 
+// MercadoPago – Checkout Pro
+Route::get('/pago/iniciar', [\App\Http\Controllers\MercadoPagoController::class, 'createPreference'])
+    ->name('payment.create');
+
+Route::get('/pago/exitoso', [\App\Http\Controllers\MercadoPagoController::class, 'success'])
+    ->name('payment.success');
+
+Route::get('/pago/fallido', [\App\Http\Controllers\MercadoPagoController::class, 'failure'])
+    ->name('payment.failure');
+
+Route::get('/pago/pendiente', [\App\Http\Controllers\MercadoPagoController::class, 'pending'])
+    ->name('payment.pending');
+
 Route::get('/redirect-after-login', function () {
         // Esta ruta solo redirige basándose en el rol
         return redirect()->route('index');  // Puedes tener una vista simple indicando que está redirigiendo
